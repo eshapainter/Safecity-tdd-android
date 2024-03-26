@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 17" width="16" height="17">
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: none;stroke: #2F1153;stroke-linecap:round;stroke-linejoin:round;stroke-width: 2 } 
+	</style>
+	<g id="Icon_feather-arrow-left">
+		<path id="Path_1879" class="shp0" d="M14.84 8.34L1 8.34" />
+		<path id="Path_1880" class="shp0" d="M8.58 15.26L1 8.34L8.58 1.41" />
+	</g>
+</svg>

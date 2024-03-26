@@ -1,0 +1,81 @@
+<ion-header class="ion-no-border" translucent>
+<div class="header-background"></div>
+  <ion-toolbar>
+   <ion-buttons slot="start" >
+   <ion-back-button defaultHref='/reportfiledeight' icon="undefined" text=""  class="backbutton"></ion-back-button>
+   </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="newbg">
+<div class="mainareain">
+<ion-row >
+      <ion-col size="12">
+<div class="newtext">
+<h4>Do you feel any of the below led to you being attacked?<span class="red">*</span></h4>
+ <p>(Select all that Apply)</p>
+<ion-list >
+  <ion-radio-group (ionChange)=getLed($event)>
+
+     <ion-item >
+    <ion-label>My gender</ion-label>
+    <ion-checkbox slot="end" value="My gender" ></ion-checkbox>
+  </ion-item>
+
+    <ion-item>
+      <ion-label>My sexuality/perceived sexuality</ion-label>
+      <ion-radio slot="end" value="My sexuality/perceived sexuality"></ion-radio>
+    </ion-item>
+	   <ion-item>
+    <ion-label>My ethnicity,religion, or caste</ion-label>
+    <ion-checkbox slot="end" value="My ethnicity,religion, or caste" ></ion-checkbox>
+  </ion-item>
+ <ion-item>
+    <ion-label>Because the harasser wanted to intimidate me</ion-label>
+    <ion-checkbox slot="end" value="Because the harasser wanted to intimidate me" ></ion-checkbox>
+  </ion-item>
+     
+    <ion-item>
+      <ion-label>Because of my relationship status</ion-label>
+     <ion-checkbox slot="end" value="Because of my relationship"></ion-checkbox>
+    </ion-item>
+
+    <ion-item *ngIf="RelationFieldData" class="newin">
+      <ion-input  placeholder="Please specify" [(ngModel)]="RelationData"></ion-input>
+    </ion-item>
+
+	   <ion-item>
+      <ion-label>Because the harasser wanted to sexually assault me</ion-label>
+      <ion-radio slot="end" value="Because the harasser wanted"></ion-radio>
+    </ion-item>
+
+	  <ion-item>
+      <ion-label>Don’t know</ion-label>
+      <ion-radio slot="end" value="Don’t know"></ion-radio>
+    </ion-item>
+
+	 <ion-item>
+    <ion-label>Other </ion-label>
+    <ion-checkbox slot="end" value="Other"></ion-checkbox>
+  </ion-item>
+
+    <ion-item *ngIf="otherFieldData" class="newin">
+      <ion-input  placeholder="Please specify" [(ngModel)] = "otherData" ></ion-input>
+    </ion-item>
+  
+  </ion-radio-group>
+</ion-list>
+
+   </div>
+    </ion-col>
+   </ion-row>
+   </div>
+</ion-content>
+<div class="bottom">
+<ion-row>
+     <ion-col col-12>
+
+<ion-button expand="full" shape="round"  class="newbtn" (click)="goToFieldTen()" [disabled]="buttonDisabled">NEXT</ion-button>
+  </ion-col>
+   </ion-row>
+</div>

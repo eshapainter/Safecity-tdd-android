@@ -1,0 +1,46 @@
+
+<ion-content>
+  <div class="mainarea">
+    <img src="assets/images/icons/logo.svg" />
+    <ion-row>
+      <ion-col col-12>
+
+        <div class="newselect">
+        
+		<ion-item mode="ios">
+		 <ion-label position="stacked" class="newlabel">{{ 'are_you' | translate }}
+            </ion-label>
+    <ion-radio-group class="newsidearea"  mode="md" (ionChange) = "selectVlaue($event)">
+    <ion-item>
+      <ion-label>{{ 'yes' | translate }}</ion-label>
+      <ion-radio slot="start" 
+      ></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{ 'no' | translate }}</ion-label>
+      <ion-radio slot="start" value="no"></ion-radio>
+    </ion-item>
+    </ion-radio-group>
+        </ion-item>
+		<ion-item mode="ios" *ngIf="showOrgList">
+		 <ion-label class="newlabel" position="stacked">{{'please_select' | translate }}
+     </ion-label>
+          <ion-select placeholder="Select One" mode="ios" (ionChange) = "selectOrg($event)">
+            <ion-select-option *ngFor="let item of orgzationList" value = "{{item.id}},{{item.passcode}}">{{item.name}}</ion-select-option>
+          </ion-select>
+        </ion-item>
+        </div>
+
+      </ion-col>
+    </ion-row>
+
+  </div>
+ <div class="bottom">
+  <ion-row>
+    <ion-col col-12>
+      <ion-button expand="full" shape="round" class="newbtn" (click)="verfication()" [disabled]="buttondisable">{{ 'proceed' | translate }}
+      </ion-button>
+    </ion-col>
+  </ion-row>
+  </div>
+</ion-content>

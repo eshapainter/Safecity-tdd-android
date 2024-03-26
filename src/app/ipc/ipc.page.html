@@ -1,0 +1,77 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+   <ion-buttons slot="start" >
+   <ion-back-button defaultHref='/tabs/home' icon="undefined" text=""  class="backbutton"></ion-back-button>
+  </ion-buttons>
+  <ion-title><div class="ion-text-wrap">{{title}}</div></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	  <div class="newipc">
+<ion-item lines="none" *ngFor="let item of ipcList;let i=index" class="boxarea" (click)= "domestic(item.content,item.title)">
+  <ion-label>{{item.title}}</ion-label>
+<img slot="end" src="assets/images/icons/rightarrow.svg"/>
+</ion-item>
+<!-- <ion-item lines="none" class="newcard" (click)= "online()">
+  <ion-label>Online Harassment</ion-label>
+<img slot="end" src="assets/images/icons/rightarrow.svg"/>
+</ion-item>
+<ion-item lines="none" class="newcard" (click)= "sexualassault()">
+  <ion-label>Rape/Sexual Assault</ion-label>
+<img slot="end" src="assets/images/icons/rightarrow.svg"/>
+</ion-item>
+<ion-item lines="none" class="newcard" (click)= "catcalls()">
+  <ion-label>Catcalls / Whistles 
+</ion-label>
+<img slot="end" src="assets/images/icons/rightarrow.svg"/>
+</ion-item>
+<ion-item lines="none" class="newcard" (click)= "staking()">
+  <ion-label>Stalking</ion-label>
+<img slot="end" src="assets/images/icons/rightarrow.svg"/>
+</ion-item>
+<ion-item lines="none" class="newcard" (click)= "ogling()">
+  <ion-label>Ogling/Facial Expressions/Staring</ion-label>
+<img slot="end" src="assets/images/icons/rightarrow.svg"/>
+</ion-item>
+<ion-item lines="none" class="newcard" (click)= "taking()">
+  <ion-label>Taking photos without permission</ion-label>
+<img slot="end" src="assets/images/icons/rightarrow.svg"/>
+</ion-item>
+<ion-item lines="none" class="newcard" (click)= "indecent()">
+  <ion-label>Indecent exposure/Masturbation in public</ion-label>
+<img slot="end" src="assets/images/icons/rightarrow.svg"/>
+</ion-item>
+<ion-item lines="none" class="newcard" (click)= "touching()">
+  <ion-label>Touching/Groping</ion-label>
+<img slot="end" src="assets/images/icons/rightarrow.svg"/>
+</ion-item>
+<ion-item lines="none" class="newcard" (click)= "commenting()">
+  <ion-label>Commenting</ion-label>
+<img slot="end" src="assets/images/icons/rightarrow.svg"/>
+</ion-item>
+<ion-item lines="none" class="newcard" (click)= "sexualinvite()">
+  <ion-label>Sexual Invites</ion-label>
+<img slot="end" src="assets/images/icons/rightarrow.svg"/>
+</ion-item>
+<ion-item lines="none" class="newcard" (click)= "chain()">
+  <ion-label>Chain Snatching/Robbery</ion-label>
+<img slot="end" src="assets/images/icons/rightarrow.svg"/>
+</ion-item>
+<ion-item lines="none" class="newcard" (click)= "human()">
+  <ion-label>Human Trafficking</ion-label>
+<img slot="end" src="assets/images/icons/rightarrow.svg"/>
+</ion-item>
+<ion-item lines="none" class="newcard" >
+  <ion-label>Others</ion-label>
+<img slot="end" src="assets/images/icons/rightarrow.svg"/>
+</ion-item> -->
+	<ion-row>
+          <ion-col size="12">
+		  <div class="newbottom">
+	<p>{{'for_more_info' | translate}} <span><a target="_blank" rel="noopener noreferrer" href="https://safecity.in/">safecity.in</a></span></p>
+	</div>
+	 </ion-col>
+        </ion-row>
+</div>
+</ion-content>

@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" >
+   <ion-back-button defaultHref='/tabs/home' icon="undefined" text=""  class="backbutton"></ion-back-button>
+   </ion-buttons>
+    <ion-title>{{'contact_menu' | translate}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="mainbgcontact">
+<ion-row>
+     <ion-col col-12 >
+	 <!-- <div class="newarea" [innerHTML]= "content" > -->
+	 <div class="newcontact" [innerHTML]= "content" >
+	  <!-- <h2 style="width:100%;height:auto;font-size:18px;font-weight:500;color:#220E0E;margin-bottom:12px;">Get in touch</h2> -->
+        <!-- <h5 style="height:auto;font-size:16px;line-height:24px;font-weight:400;margin-bottom:0px;">Give us a missed call to share your experience. This is only for India callers. Our team will call them back within 24 hours.</h5> -->
+
+      <!-- <a href="tel:+91 9876432456"  rel="noopener noreferrer" style="height:auto; display: block; text-decoration:none; font-size:16px;line-height:24px;font-weight:500;color:#592D8D;border-bottom:1px solid #ddd;margin-top: 10px; -->
+    <!-- padding-bottom: 10px; margin-bottom:15px;">+91 9876432456</a> -->
+ 
+        <!-- <h5 style="height:auto;font-size:16px;line-height:24px;font-weight:400;    display: block;  margin-bottom:0px;">Write To Us</h5> -->
+        <!-- <a href="mailto:info@reddotfoundation.org"   style="height:auto;display: block; text-decoration:none;font-size:16px;line-height:24px;font-weight:500;color:#592D8D;border-bottom:1px solid #ddd;margin-top: 10px; -->
+    <!-- padding-bottom: 10px; margin-bottom:15px;">info@reddotfoundation.org</a> -->
+ 	 </div>
+	 <!-- <div class="newarea">
+	 <h2>Get in touch</h2>
+  <ion-item>
+    <ion-label class="ion-text-wrap">
+      <ion-text >
+        <h5>Give us a missed call to share your experience. This is only for India callers. Our team will call them back within 24 hours.</h5>
+      </ion-text>
+      <p (click)="openDailerPad()">+91 9876432456</p>
+     
+    </ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label class="ion-text-wrap">
+      <ion-text >
+        <h5>Write To Us</h5>
+      </ion-text>
+      <p (click)="openEmail()">info@reddotfoundation.org</p>
+     
+ 
+    </ion-label>
+  </ion-item>
+ 
+  
+	 </div> -->
+	 </ion-col>
+   </ion-row>
+</div>
+</ion-content>

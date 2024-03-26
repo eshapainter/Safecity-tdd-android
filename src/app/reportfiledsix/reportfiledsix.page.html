@@ -1,0 +1,85 @@
+<ion-header class="ion-no-border">
+    <div class="header-background"></div>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref='/reportfiledfive' icon="undefined" text="" class="backbutton"></ion-back-button>
+
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="newbg">
+    <div class="mainareain">
+        <ion-row>
+            <ion-col size="12">
+                <div class="newtext">
+                    <h4>Can you tell us when this happened?<span class="red">*</span></h4>
+                    <ion-row>
+                        <ion-col size="12">
+                            <ion-list>
+                                <ion-item>
+                                    <ion-label position="stacked">Select Time</ion-label>
+                                    <div class="new">
+                                        <ion-datetime displayFormat="h:mm a" placeholder="Select Time" [disabled]="singleTimeDisable" (ionChange)="getTime($event)"></ion-datetime>
+                                        <ion-icon name="" class="newcal" slot="end"></ion-icon>
+
+                                    </div>
+
+                                </ion-item>
+                                <ion-item (click)="timeClear()">
+                                    <p class="newclear">Clear Time</p>
+                                </ion-item>
+                                <ion-item class="newcheckbox">
+                                    <ion-label>This is an estimate</ion-label>
+                                    <ion-checkbox [disabled]="singleTimeDisable" slot="start" (ngChange)="estimate($event)"></ion-checkbox>
+                                </ion-item>
+                            </ion-list>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col size="12">
+                            <div class="newadd">OR</div>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col size="12">
+                            <ion-list>
+                                <ion-list-header>
+                                    <ion-label>Select Time Range</ion-label>
+                                </ion-list-header>
+                                <ion-item class="timenext">
+
+                                    <div class="new">
+                                        <ion-datetime displayFormat="h:mm a" placeholder="Select Time" (ionChange)="getTimeFrom($event)"></ion-datetime>
+                                        <ion-icon name="" class="newcal" slot="end"></ion-icon>
+                                    </div>
+                                </ion-item>
+                                <ion-item class="newarea">
+                                    <ion-label position="stacked">to</ion-label>
+                                </ion-item>
+                                <ion-item class="timenext">
+
+                                    <div class="new">
+                                        <ion-datetime displayFormat="h:mm a" placeholder="Select Time" [disabled]="timeRangeDisable" (ionChange)="getTimeTo($event)"></ion-datetime>
+                                        <ion-icon name="" class="newcal" slot="end"></ion-icon>
+                                    </div>
+
+                                </ion-item>
+                                <p class="newclear" (click)="timeClear()">Clear Time Range</p>
+
+                            </ion-list>
+                        </ion-col>
+                    </ion-row>
+                </div>
+            </ion-col>
+        </ion-row>
+    </div>
+</ion-content>
+<div class="bottom">
+    <ion-row>
+        <ion-col col-12>
+
+            <ion-button expand="full" shape="round" class="newbtn" (click)="gotoFieldSeven()" [disabled]="buttonDisabled">NEXT</ion-button>
+        </ion-col>
+    </ion-row>
+</div>

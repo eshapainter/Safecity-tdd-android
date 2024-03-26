@@ -1,0 +1,48 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+   <ion-buttons slot="start" >
+   <ion-back-button (click)=back() defaultHref='/help' icon="undefined" text=""  class="backbutton"></ion-back-button>
+  </ion-buttons>
+  <ion-title>{{'police' | translate}}</ion-title>
+  </ion-toolbar>
+ 
+</ion-header>
+
+<ion-content>
+
+		 <div class="newpolice">
+		 <div class="segmentarea">
+		 <div class="btnarea btnareaactive">
+      {{'police' | translate}}
+		 </div>
+		  <div class="btnarea" (click)="legal()">
+        {{'legal_menu' | translate}}
+		 </div>
+		 </div>
+		 </div>
+    
+<div class="mainpolice">
+
+   <ion-row>
+  <ion-col size="12">
+<div class="policearea">
+<h5>{{'map_move_pin' | translate}}</h5>
+<!-- <img src="assets/images/googleimg.png"/>  -->
+<div #map id="map"></div>
+  </div>
+    </ion-col>
+   </ion-row>
+      
+      </div>
+
+      
+<ion-row>
+     <ion-col col-12>
+
+<ion-button expand="full" shape="round"  class="newbtn" (click)="listing()"   >{{'find_polc_stn' | translate}}</ion-button>
+  </ion-col>
+   </ion-row>
+</ion-content>
+ <!-- <div class="bottom"> -->
+
+<!-- </div> -->

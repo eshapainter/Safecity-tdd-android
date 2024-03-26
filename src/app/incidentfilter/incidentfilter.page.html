@@ -1,0 +1,92 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref='/home' icon="undefined" text="" class="backbutton"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{'home_all_filters' | translate}}</ion-title>
+    <div class="newsidetext" slot="end" tappable (click)='deselectAll()'>
+      <p>{{'button_clear' | translate }} {{'home_all_filters' | translate}}</p>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="newcontentin">
+    <div class="newlist">
+      <ion-card class="newcard">
+        <ion-row>
+          <ion-col size="12">
+            <h5 class="newhead">{{'home_type_assault' | translate }}</h5>
+            <ion-list (ionChange)="getCategory($event)">
+              <ion-item>
+                <ion-label>Domestic Violence</ion-label>
+                <ion-checkbox slot="end" value="Domestic Violence,1" [(ngModel)] = "BV1"></ion-checkbox>
+              </ion-item>
+              <ion-item>
+                <ion-label>Online Harassment</ion-label>
+                <ion-checkbox slot="end" value="Online Harassment,2" [(ngModel)] = "BV2"></ion-checkbox>
+              </ion-item>
+              <ion-item>
+                <ion-label>Rape/Sexual Assault</ion-label>
+                <ion-checkbox slot="end" value="Rape/Sexual Assault,3" [(ngModel)] = "BV3"></ion-checkbox>
+              </ion-item>
+              <ion-item>
+                <ion-label>Physical Assault</ion-label>
+                <ion-checkbox slot="end" value="Physical Assault,4" [(ngModel)] = "BV4"></ion-checkbox>
+              </ion-item>
+              <ion-item>
+                <ion-label>Stalking</ion-label>
+                <ion-checkbox slot="end" value="Stalking,5" [(ngModel)] = "BV5"></ion-checkbox>
+              </ion-item>
+              <ion-item>
+                <ion-label>Ogling/Facial Expressions/Staring</ion-label>
+                <ion-checkbox slot="end" value="Ogling/Facial Expressions/Staring,6" [(ngModel)] = "BV6"></ion-checkbox>
+              </ion-item>
+              <ion-item>
+                <ion-label>Taking photos without permission</ion-label>
+                <ion-checkbox slot="end" value="Taking photos without permission,7" [(ngModel)] = "BV7"></ion-checkbox>
+              </ion-item>
+              <ion-item>
+                <ion-label>Indecent exposure/Masturbation in public</ion-label>
+                <ion-checkbox slot="end" value="Indecent exposure/Masturbation in public,8" [(ngModel)] = "BV8"></ion-checkbox>
+              </ion-item>
+              <ion-item>
+                <ion-label>Touching /Groping</ion-label>
+                <ion-checkbox slot="end" value="Touching /Groping,9" [(ngModel)] = "BV9"></ion-checkbox>
+              </ion-item>
+              <ion-item>
+                <ion-label>Showing Pornography without consent</ion-label>
+                <ion-checkbox slot="end" value="Showing Pornography without consent,10" [(ngModel)] = "BV10"></ion-checkbox>
+              </ion-item>
+              <ion-item>
+                <ion-label>Commenting/Sexual Invites</ion-label>
+                <ion-checkbox slot="end" value="Commenting/Sexual Invites,11" [(ngModel)] = "BV11"></ion-checkbox>
+              </ion-item>
+              <ion-item>
+                <ion-label>Chain Snatching/Robbery</ion-label>
+                <ion-checkbox slot="end" value="Chain Snatching/Robbery,12" [(ngModel)] = "BV12"></ion-checkbox>
+              </ion-item>
+              <ion-item>
+                <ion-label>Human Trafficking</ion-label>
+                <ion-checkbox slot="end" value="Human Trafficking,13" [(ngModel)] = "BV13"></ion-checkbox>
+              </ion-item>
+              <ion-item>
+                <ion-label>Other</ion-label>
+                <ion-checkbox slot="end" value="Other,14" [(ngModel)] = "BV14"></ion-checkbox>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </div>
+  </div>
+
+</ion-content>
+<div class="bottom">
+  <ion-row>
+    <ion-col col-12>
+
+      <ion-button expand="full" shape="round" class="newbtn" (click)="filter()" [disabled] = 'buttonDisable'>{{'button_apply' | translate }}</ion-button>
+    </ion-col>
+  </ion-row>
+</div>

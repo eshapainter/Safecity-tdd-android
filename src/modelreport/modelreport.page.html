@@ -1,0 +1,252 @@
+<ion-header *ngIf = "showFull == 'true'" >
+  <ion-toolbar >
+ <ion-buttons slot="start" >
+   <ion-back-button (click)="back()" defaultHref='/home' icon="undefined" text=""  class="backbutton"></ion-back-button>
+   </ion-buttons>
+  <div class="newsidetext" slot="end" (click)="help()">
+   <p>Help</p>
+    </div>
+
+  <ion-buttons  slot="end" class="newmenu" (click)="menu()">
+    <img src="assets/images/icons/menunew.svg"/>
+  </ion-buttons>
+</ion-toolbar>
+</ion-header>
+<ion-content>
+<div class="toparrow" *ngIf = "showFull != 'true'" (click)="newmodalin()">
+<ion-icon name="chevron-up-outline"></ion-icon>
+</div>
+<div class="mainarea">
+<div class="segmentin">
+	 <ion-segment  mode="ios" value="one"  [(ngModel)]="segmentModel" 
+    (ionChange)="segmentChanged($event)">
+  <ion-segment-button value="one">
+    <ion-label>Incidents</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="two">
+    <ion-label>Safety tips</ion-label>
+  </ion-segment-button>
+  </ion-segment>
+  </div>
+  
+  <div  *ngIf="segmentModel === 'one'">
+  <ion-card class="newcard" (click)="preframing()">
+  <ion-card-content>
+   <p>Sharing your experience helps us identify patterns and create safer spaces. Your information remains anonymous.</p>
+   <h5>Share Incident Anonymously</h5>
+  </ion-card-content>
+</ion-card>
+  <div class="newitem">
+  <h2>Incidents Shared by community</h2>
+   <ion-chip fill="outline"  >
+            <ion-label>Filters</ion-label>
+                   </ion-chip>
+		   <div  class="clear"  >
+  Clear
+    </div>
+   <ion-card class="newcardin" tappable (click)="viewreport()" >
+          <ion-card-header>
+		 
+            <ion-card-title> <ion-row>
+     <ion-col size="12">Catcalling | Staring</ion-col>
+ </ion-row></ion-card-title>
+			 
+          </ion-card-header>
+          <ion-card-content>
+		   <ion-row>
+     <ion-col size="5">
+		  <div class="subheading">
+		  <h3>at Area name</h3>
+		 
+		  </div>
+		  </ion-col>
+		  <ion-col size="7">
+		  <div class="subheading">
+		  <h4>1 days ago</h4>
+		  </div>
+		  </ion-col>
+ </ion-row>
+ <ion-row>
+     <ion-col size="12">
+        <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor… <span>Read more</span></p>
+			 </ion-col>
+ </ion-row>
+          </ion-card-content>
+		  
+        </ion-card>
+		   <ion-card class="newcardin" tappable (click)="viewreport()" >
+          <ion-card-header>
+		 
+            <ion-card-title> <ion-row>
+     <ion-col size="12">Domestic Violence</ion-col>
+ </ion-row></ion-card-title>
+			 
+          </ion-card-header>
+          <ion-card-content>
+		   <ion-row>
+     <ion-col size="5">
+		  <div class="subheading">
+		  <h3>at Area name</h3>
+		 
+		  </div>
+		  </ion-col>
+		  <ion-col size="7">
+		  <div class="subheading">
+		  <h4>20 Feb 2022 10:09AM</h4>
+		  </div>
+		  </ion-col>
+ </ion-row>
+ <ion-row>
+     <ion-col size="12">
+        <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor… <span>Read more</span></p>
+			 </ion-col>
+ </ion-row>
+          </ion-card-content>
+		  
+        </ion-card>
+		   <ion-card class="newcardin" tappable >
+          <ion-card-header>
+		 
+            <ion-card-title> <ion-row>
+     <ion-col size="12">Catcalling | Staring</ion-col>
+ </ion-row></ion-card-title>
+			 
+          </ion-card-header>
+          <ion-card-content>
+		   <ion-row>
+     <ion-col size="5">
+		  <div class="subheading">
+		  <h3>at Area name</h3>
+		 
+		  </div>
+		  </ion-col>
+		  <ion-col size="7">
+		  <div class="subheading">
+		  <h4>1 days ago</h4>
+		  </div>
+		  </ion-col>
+ </ion-row>
+ <ion-row>
+     <ion-col size="12">
+        <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor… <span>Read more</span></p>
+			 </ion-col>
+ </ion-row>
+          </ion-card-content>
+		  
+        </ion-card>
+	
+		</div>
+		<ion-button  class="newsafe" shape="round" expand="full" (click)="preframing()">Share Incident anonymously</ion-button>
+  </div>
+  
+  <div  *ngIf="segmentModel === 'two'">
+<ion-card class="newcard" (click)="safetytip()">
+  <ion-card-content>
+   <p>Tell us what you do for your safety so that others can do the same.</p>
+   <h5>Share Safety Tip Anonymously</h5>
+  </ion-card-content>
+</ion-card>
+  <div class="newitem">
+  <h2>Safety tips shared by community</h2>
+   <ion-chip fill="outline"  >
+            <ion-label  >Filters</ion-label>
+                   </ion-chip>
+		   <div  class="clear"  >
+  Clear
+    </div>
+   <ion-card class="newcardin" tappable >
+          <ion-card-header>
+		 
+            <ion-card-title> <ion-row>
+     <ion-col size="12">Bad crowd near bridge</ion-col>
+ </ion-row></ion-card-title>
+			 
+          </ion-card-header>
+          <ion-card-content>
+		   <ion-row>
+     <ion-col size="5">
+		  <div class="subheading">
+		  <h3>at Area name</h3>
+		 
+		  </div>
+		  </ion-col>
+		  <ion-col size="7">
+		  <div class="subheading">
+		  <h4>1 days ago</h4>
+		  </div>
+		  </ion-col>
+ </ion-row>
+ <ion-row>
+     <ion-col size="12">
+        <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor… <span>Read more</span></p>
+			 </ion-col>
+ </ion-row>
+          </ion-card-content>
+		  
+        </ion-card>
+		   <ion-card class="newcardin" tappable >
+          <ion-card-header>
+		 
+            <ion-card-title> <ion-row>
+     <ion-col size="12">Safety tip title</ion-col>
+ </ion-row></ion-card-title>
+			 
+          </ion-card-header>
+          <ion-card-content>
+		   <ion-row>
+     <ion-col size="5">
+		  <div class="subheading">
+		  <h3>at Area name</h3>
+		 
+		  </div>
+		  </ion-col>
+		  <ion-col size="7">
+		  <div class="subheading">
+		  <h4>1 days ago</h4>
+		  </div>
+		  </ion-col>
+ </ion-row>
+ <ion-row>
+     <ion-col size="12">
+        <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor… <span>Read more</span></p>
+			 </ion-col>
+ </ion-row>
+          </ion-card-content>
+		  
+        </ion-card>
+		   <ion-card class="newcardin" tappable >
+          <ion-card-header>
+		 
+            <ion-card-title> <ion-row>
+     <ion-col size="12">Safety tip title</ion-col>
+ </ion-row></ion-card-title>
+			 
+          </ion-card-header>
+          <ion-card-content>
+		   <ion-row>
+     <ion-col size="5">
+		  <div class="subheading">
+		  <h3>at Area name</h3>
+		 
+		  </div>
+		  </ion-col>
+		  <ion-col size="7">
+		  <div class="subheading">
+		  <h4>1 days ago</h4>
+		  </div>
+		  </ion-col>
+ </ion-row>
+ <ion-row>
+     <ion-col size="12">
+        <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor… <span>Read more</span></p>
+			 </ion-col>
+ </ion-row>
+          </ion-card-content>
+		  
+        </ion-card>
+	
+		</div>
+		<ion-button  class="newsafein" shape="round" expand="full" (click)="preframing()">Share safety tipy anonymously</ion-button>
+  </div>
+  </div>
+</ion-content>

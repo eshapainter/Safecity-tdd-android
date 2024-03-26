@@ -1,0 +1,255 @@
+.backbutton
+{
+background-image: url(/assets/images/icons/leftarrow.svg);
+width:25px;
+background-position: 50% 50%;
+background-repeat: no-repeat;
+height:25px;
+margin-left:4px;
+}
+
+
+
+.header-ios .toolbar-ios:last-child .toolbar-background-ios
+{
+border:0;
+
+}
+
+ion-header
+{
+-webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+-moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+z-index:9999;
+}
+
+ion-title
+{
+color:#2F1153;
+font-size:20px;
+left: 0px;
+    top: 0px;
+    padding-left: 65px;
+    padding-right: 65px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translateZ(0px);
+font-weight: 400;
+    text-align: center;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+.sc-ion-buttons-md-s .button {
+margin-left:0;
+}
+.idmsg1{
+    font-size: 18pt;
+}
+.sc-ion-buttons-ios-s .button {
+margin-left:4px;
+}
+  
+.header-md ion-title
+{
+text-align:center;
+}
+.header-md::after
+{
+background:transparent;
+}
+
+.header-ios ion-toolbar:last-of-type
+{
+--border-width: 0 0 0;
+
+}
+.header-ios ion-toolbar
+{
+--padding-top: 3px;
+    --padding-bottom: 3px;
+    --padding-start: 4px;
+    --padding-end: 4px;
+    --min-height:75px;}
+	
+	.header-md ion-toolbar
+{
+--padding-top: 3px;
+    --padding-bottom: 3px;
+    --padding-start: 4px;
+    --padding-end: 4px;
+    --min-height:75px;}
+	
+	.homeside p
+{
+color:#592D8D;
+font-size:17px;
+padding-right:25px;
+font-weight:400;
+}
+
+.bottomchat
+{
+width:100%;
+background:#fff;
+padding:20px 10PX;
+position:fixed;
+bottom:28px;
+}
+.keyboardBottomchat{
+    width:100%;
+background:#fff;
+padding:20px 10PX;
+position:fixed;
+bottom:0;
+}
+.header-md ion-title
+{
+text-align:center;
+}
+
+.chatmain
+{
+width:100%;
+height:auto;
+margin-top:20px;
+padding:0 15px;
+margin-bottom:120px;
+}
+
+.chatinput
+{
+border:1px solid #592D8D;
+border-radius:26px;
+  --highlight-color-focused: transparent;
+ --highlight-color-valid: transparent;
+ --highlight-color-invalid: transparent;
+ --highlight-height:0;
+}
+
+.messagein
+{
+    display: flex!important;
+	    align-content: center !important;
+    -webkit-box-align: center !important;
+	    align-items: center !important;
+    margin-bottom: 20px !important;
+}
+
+.messageinright
+{
+    display: flex!important;
+	justify-content: flex-end!important;
+	    align-content: center !important;
+    -webkit-box-align: center !important;
+	    align-items: center !important;
+    margin-bottom: 20px !important;
+}
+.messagein .message
+{
+    padding: 10px !important;
+	transition: all 250ms ease-in-out !important;
+    overflow: hidden !important;
+	 background: #F4F5FC !important;
+    display: inline-flex !important;
+	  padding: 10px 18px !important;
+    border-radius: 26px !important;
+    text-align: left !important;
+    max-width: 260px !important; 
+    word-break: break-all
+    
+	}
+	
+	.message p
+{
+  color: #220E0E !important;
+  float:left;
+  margin:0;
+  font-size:15px;
+  display:flex;
+  font-weight:400;
+  word-wrap: break-word;
+}
+
+.message span{
+ color: #aaa;
+ padding-left:8px;
+ font-size:11px;
+ align-items:flex-end;
+display:flex;
+flex: none;
+}
+
+.time-right {
+  float: right;
+ 
+}
+
+.chatday
+{
+font-size:15px;
+color:#828282;
+text-align:center;
+margin-top:15px;
+margin-bottom:15px;
+
+}
+
+.otherright
+{
+
+	    transition: all 250ms ease-in-out !important;
+    overflow: hidden !important;
+	    padding: 8px 18px !important;
+		 background: #592D8D !important;
+        display: inline-flex !important;
+    max-width: 260px !important; 
+	  border-radius: 26px !important;  
+}
+
+.otherright p{
+color:#fff;
+  float:left;
+  margin:0;
+display:flex;
+  font-size:15px;
+  font-weight:400;
+      word-break: break-all
+
+}
+
+.otherright span
+{
+color:#fff;
+padding-left:8px;
+font-size:11px;
+align-items:flex-end;
+display:flex;
+flex: none;
+word-break: break-all
+}
+
+.bottomchat ion-textarea
+{
+margin-top:0;
+align-items: center;
+align-self: center;
+--padding-top: 11px;
+--highlight-background:transparent;
+    --highlight-color-focused: transparent;
+    --highlight-color-valid: transparent;
+    --highlight-color-invalid: transparent;
+	--highlight-height:0;
+}
+
+.sendin
+{
+width:10%;
+vertical-align: middle;
+display:flex;
+}
+	

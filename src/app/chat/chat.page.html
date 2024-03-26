@@ -1,0 +1,101 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref='/home' icon="undefined" text="" class="backbutton">
+            </ion-back-button>
+        </ion-buttons>
+        <ion-title>{{'chat_with_us' | translate}}</ion-title>
+        <div class="homeside" (click)="backtoHome()" slot="end">
+            <p>{{'home_menu' | translate}}</p>
+        </div>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="chatmain">
+        <!-- <div class="chatday">TODAY</div> -->
+        <div *ngIf="to_User_Id=='0'">
+            <div *ngIf="is_admin_online==false">
+                <p>{{'chat_default_msg' | translate}}</p>
+                <p class="idmsg">
+                    {{'you_can_connect_with_us' | translate}}
+                </p>
+                <p (click)="callnumber()">{{'give_missed_call' | translate}} +91 90155 10510</p>
+                <!-- <p> {{'whatsapp_our_team' | translate}}</p> -->
+                <p>{{'Leave_number' | translate}}</p>
+            </div>
+            <div *ngIf="is_admin_online==true">
+                <p class="idmsg1">{{'is_admin_online' | translate}}</p>
+            </div>
+        </div>
+        <div *ngIf="to_User_Id!='0'">
+            <div *ngFor="let item of msgArr">
+                <div class="messagein" *ngIf="item.sent_by!= 'web'">
+                    <div class="message">
+                        <p>{{item.chat_message}}</p>
+                        <span class="time-right">{{item.ampmTime}}</span>
+                    </div>
+                </div>
+                <div class="messageinright" *ngIf="item.sent_by =='web'">
+                    <div class="otherright">
+                        <p>{{item.chat_message}}</p>
+                        <span class="time-right">{{item.ampmTime}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="messagein">
+      <div class="message">
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+          dolore magna aliquyam erat</p>
+        <span class="time-right">11:00 AM</span>
+      </div>
+
+    </div>
+    <div class="messagein">
+      <div class="message">
+        <p>Sure!</p>
+        <span class="time-right">11:01 AM</span>
+      </div>
+
+    </div>
+    <div class="messageinright">
+      <div class="otherright">
+        <p>Can you tell me about ABC?</p>
+        <span class="time-right">2:00 PM</span>
+
+      </div>
+
+    </div>
+    <div class="messageinright">
+      <div class="otherright">
+        <p>Hi</p>
+        <span class="time-right">4:33 PM</span>
+      </div>
+
+    </div>
+    <div class="messagein">
+      <div class="message">
+        <p>What can we assist you with?!</p>
+        <span class="time-right">4:35 PM</span>
+      </div>
+
+    </div>
+    <div class="messagein">
+      <div class="message">
+        <p>Hi</p>
+        <span class="time-right">4:39 PM</span>
+      </div>
+
+    </div> -->
+    </div>
+    <div class="bottomchat" [ngClass]="{'keyboardBottomchat' : bottomClass}">
+        <ion-item class="chatinput">
+            <ion-textarea rows="1" placeholder="{{'type_a_message' | translate}}" [disabled]="to_User_Id=='0'" [(ngModel)]="chat_message"></ion-textarea>
+            <!-- <ion-input></ion-input> -->
+            <div class="sendin" slot="end">
+                <img src="assets/images/icons/plainarrow.svg" (click)="sendmsg()" />
+            </div>
+        </ion-item>
+    </div>
+</ion-content>

@@ -1,0 +1,45 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+   <ion-buttons slot="start" >
+   <ion-back-button defaultHref='/tabs/home' icon="undefined" text=""  class="backbutton"></ion-back-button>
+  </ion-buttons>
+  <ion-title><div class="ion-text-wrap">{{title}}</div></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="faq">
+    <ion-card class="newfirin"   *ngFor="let item of firList;let i=index">
+        <ion-row (click)="toggleGroup(i)">
+          <ion-col size="11" text-left >
+            <h5 class="newhead">{{item.title}}</h5>
+          </ion-col>
+          <ion-col size="1" >
+		  <div class="newicon">
+            <ion-icon tappable class="cent" [ngClass]="{active: isGroupShown(i)}" item-right [name]="isGroupShown(i) ? 'chevron-up-outline' : 'chevron-down-outline'"></ion-icon>
+			</div>
+          </ion-col>
+        </ion-row>
+     
+
+      <div *ngIf="isGroupShown(i)" >
+        <ion-row>
+          <ion-col size="12" >
+		  <!--  -->
+		  <!-- <p>{{item.content}}</p> -->
+		  <div class="newcontentin" [innerHTML]= "item.content">
+
+   </div>
+          </ion-col>
+        </ion-row>
+   </div>
+ </ion-card>
+    </div>
+		<div class="newbottom">
+	<ion-row>
+          <ion-col size="12">
+	<p>{{'for_more_info' | translate}} <span><a target="_blank" rel="noopener noreferrer" href="https://safecity.in/">safecity.in</a></span></p>
+	 </ion-col>
+        </ion-row>
+	</div>
+</ion-content>

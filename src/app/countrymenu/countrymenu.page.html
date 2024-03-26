@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button icon="undefined" text="" class="backbutton"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{'country' | translate}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="mainselect">
+
+    <ion-row>
+      <ion-col col-12>
+
+        <div class="newselect">
+
+          <!-- <ion-label class="newlabel" position="stacked">{{'home_country_your_country' | translate }}</ion-label> -->
+          <!-- <ion-searchbar placeholder="Filter Schedules"></ion-searchbar> -->
+
+
+          <!-- <form [formGroup]="form"> -->
+          <!-- <ion-item >    
+    <ion-label class="newlabel" position="stacked">{{'home_country_your_country' | translate }}</ion-label>
+    <ion-select placeholder="{{'select_one' | translate}}" [(ngModel)]="country" (ionChange) = "getCountry($event)">
+      <ion-select-option *ngFor="let item of country_list"  value="{{item.country_id}}">{{item.country_name}}
+      </ion-select-option>
+    </ion-select>
+  </ion-item> -->
+          <ion-item>
+            <ion-label class="newlabel"   position="stacked">
+              {{'home_country_your_country' | translate }}
+            </ion-label>
+            <ion-searchbar no-padding showCancelButton="never" mode="ios" (ionChange)="getCountry($event)"
+              [(ngModel)]="countryName" placeholder="Search for Location" disabled="false" debounce="500">
+            </ion-searchbar>
+            <div class="newserchlist" *ngIf="isItemAvailable && showCountrylist">
+              <ion-item (click)="selectedLocation(item)" *ngFor="let item of countryList">{{item.country_name}}
+              </ion-item>
+            </div>
+          </ion-item>
+          <!-- </form> -->
+
+          <ion-item>
+            <ion-label class="newlabel" position="stacked">{{'select_city' | translate}}</ion-label>
+            <ion-searchbar no-padding showCancelButton="never" mode="ios" (ionChange)="getCity($event)"
+              [(ngModel)]="searchTerm" placeholder="Search for city" disabled="false" debounce="500"></ion-searchbar>
+
+            <!-- <ion-item> -->
+
+            <!-- <ion-select placeholder="{{'select_one' | translate}}"  > -->
+
+            <div class="newserchlist" *ngIf="hide_city_search">
+              <ion-item (click)="selectedcity(item)" *ngFor="let item of city_list">{{item.city_name}}</ion-item>
+            </div>
+          </ion-item>
+          <!-- 
+	  
+      </ion-select-option>
+    </ion-select> -->
+          <!-- </ion-item> -->
+        </div>
+        <!-- </form> -->
+      </ion-col>
+    </ion-row>
+
+  </div>
+</ion-content>

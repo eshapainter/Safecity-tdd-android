@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'Gelion';
+    src: url('/assets/fonts/Gelion-Medium.eot');
+    src: url('/assets/fonts/Gelion-Medium.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/Gelion-Medium.woff2') format('woff2'),
+        url('/assets/fonts/Gelion-Medium.woff') format('woff'),
+        url('/assets/fonts/Gelion-Medium.ttf') format('truetype'),
+        url('/assets/fonts/Gelion-Medium.svg#Gelion-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Gelion';
+    src: url('/assets/fonts/Gelion-Regular.eot');
+    src: url('/assets/fonts/Gelion-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/Gelion-Regular.woff2') format('woff2'),
+        url('/assets/fonts/Gelion-Regular.woff') format('woff'),
+        url('/assets/fonts/Gelion-Regular.ttf') format('truetype'),
+      url('/assets/fonts/Gelion-Regular.svg#Gelion-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gelion Semi';
+    src: url('/assets/fonts/Gelion-SemiBold.eot');
+    src: url('/assets/fonts/Gelion-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/Gelion-SemiBold.woff2') format('woff2'),
+        url('/assets/fonts/Gelion-SemiBold.woff') format('woff'),
+        url('/assets/fonts/Gelion-SemiBold.ttf') format('truetype'),
+        url('/assets/fonts/Gelion-SemiBold.svg#Gelion-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+body
+{
+   font-family: 'Gelion';
+
+}
+
+.alert-head
+{
+display:none !important;
+}
+   
+
+

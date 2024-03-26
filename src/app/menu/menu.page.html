@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" >
+   <ion-back-button  icon="undefined" text=""  class="backbutton"></ion-back-button>
+   </ion-buttons>
+    <ion-title>{{'menu_option' | translate}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-row >
+      <ion-col size="12">
+   <ion-list class="newitem">
+    <ion-item (click)="view_data()">
+      <ion-label>{{'view_data' | translate}}</ion-label>
+      <!-- <ion-label><a class="viewinnn" href="https://public.tableau.com/profile/mehul.sharma3900#!/vizhome/Safecity_Dashboard_Delhi_final/MumbaiStory" target="_blank">{{'view_data' | translate}}</a></ion-label> -->
+    </ion-item>
+  <ion-item (click)="legal()">
+    <ion-label> {{'legal_menu' | translate}}</ion-label>
+  </ion-item>
+  <ion-item (click)="contact()">
+    <ion-label>{{'contact_menu' | translate}}</ion-label>
+  </ion-item>
+  <ion-item (click)="wellness()">
+    <ion-label>{{'Wellness_Resources' | translate}}</ion-label>
+  </ion-item>
+  
+  <ion-item (click)="report()">
+    <ion-label>{{'incident_shared_by_me' | translate}}</ion-label>
+  </ion-item>
+  <ion-item (click)="safety()">
+    <ion-label>{{'safety_shared_by_me' | translate}}</ion-label>
+  </ion-item>
+  <ion-item (click)="setting()">
+    <ion-label>{{'settings' | translate}}</ion-label>
+  </ion-item>
+  <ion-item (click)="faq()">
+    <ion-label>{{'faq_menu' | translate}}</ion-label>
+  </ion-item>
+  <ion-item (click)="about()">
+    <ion-label>{{'about_safecity_menu' | translate}}</ion-label>
+  </ion-item>
+  <ion-item (click)="volunteer()">
+    <ion-label>{{'volunteer_menu' | translate}}</ion-label>
+  </ion-item>
+    <ion-item (click)="donate()">
+    <ion-label>{{'donate_menu' | translate}}</ion-label>
+  </ion-item>
+ 
+</ion-list>
+</ion-col>
+   </ion-row>
+
+
+
+</ion-content>

@@ -1,0 +1,105 @@
+<ion-header>
+  <ion-toolbar>
+  <ion-buttons slot="start" >
+   <ion-back-button defaultHref='' icon="undefined" text=""  class="backbutton"></ion-back-button>
+   </ion-buttons> 
+<ion-title><div class="ion-text-wrap">{{'edit_incident' | translate}}</div></ion-title>   
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="newbgin">
+<ion-row>
+      <ion-col col-12>
+<ion-list>
+
+  <div id="edit_div" class="forminci" >
+                                        
+  </div>
+
+ <!-- <ion-item>
+    <ion-label position="stacked">Who are you reporting for?</ion-label>
+    <ion-select  >
+      <ion-select-option value="my">Myself</ion-select-option>
+      <ion-select-option value="someone">Someone else</ion-select-option>
+    </ion-select>
+  </ion-item>
+<ion-item>
+  <ion-label position="stacked">Can you help us categorize the incident?</ion-label>
+  <ion-select >
+      <ion-select-option value="my">Catcalling | Staring</ion-select-option>
+      <ion-select-option value="someone">Someone else</ion-select-option>
+    </ion-select>
+</ion-item>
+<ion-item>
+  <ion-label position="stacked">How old are you?</ion-label>
+  <ion-input type="text"  ></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="stacked">Please tell us your gender</ion-label>
+  <ion-select >
+      <ion-select-option value="male">Male</ion-select-option>
+      <ion-select-option value="female">Female</ion-select-option>
+	  <ion-select-option value="others">Others</ion-select-option>
+	  <ion-select-option value="not">Prefer not to say</ion-select-option>
+    </ion-select>
+</ion-item>
+<ion-item>
+  <ion-label position="stacked">Can you tell us what happened?</ion-label>
+  <ion-textarea rows="4" cols="15" placeholder="Enter any notes here..."></ion-textarea>
+</ion-item>
+<ion-item>
+  <ion-label position="stacked">What do you think led to the attack?</ion-label>
+<ion-select >
+      <ion-select-option value="gender">My gender</ion-select-option>
+      <ion-select-option value="sexuality">My sexuality/perceived sexuality</ion-select-option>
+	  <ion-select-option value="religion">My ethnicity,religion, or caste</ion-select-option>
+	  <ion-select-option value="harasser">Because the harasser wanted to intimidate me</ion-select-option>
+	    <ion-select-option value="relationship">Because of my relationship status</ion-select-option>
+		  <ion-select-option value="know">Because the harasser wanted to sexually assault me</ion-select-option>
+		  	  <ion-select-option value="know">Don’t know</ion-select-option>
+			  	  <ion-select-option value="Other">Other </ion-select-option>
+    </ion-select>
+</ion-item>
+
+<ion-item >
+  <ion-label position="stacked">Have you reported the incident to the police?</ion-label>
+  <ion-input type="text"  ></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="stacked">Did you receive medical help?</ion-label>
+  <ion-input type="text"  ></ion-input>
+</ion-item>
+<ion-item class="newinput" mode="ios">
+  <ion-label position="stacked">Location where the incident took place</ion-label>
+   <div class="newarea">
+  <ion-input type="text"  ></ion-input>
+   <img  src="assets/images/icons/location.svg"/>
+   </div>
+</ion-item>
+<ion-item class="newinput" mode="ios">
+  <ion-label position="stacked">When did the incident take place?</ion-label>
+  <div class="newarea">
+  <ion-datetime displayFormat="MM DD YY" placeholder="Select Date"></ion-datetime>
+  <img  src="assets/images/icons/calendar.svg"/>
+  </div>
+</ion-item>
+<ion-item class="newinput" mode="ios">
+  <ion-label position="stacked">What time did the incident take place?</ion-label>
+  <div class="newarea">
+  <ion-datetime displayFormat="HH:mm" placeholder="Select Date"></ion-datetime>
+   <img src="assets/images/icons/time.svg"/>
+   </div> 
+</ion-item>-->
+	 </ion-list>
+	 
+	  <ion-row>
+     <ion-col col-12>
+
+<ion-button expand="full" id="saveChanges" shape="round"  class="newbtn"  (click)="final_Submit()"  >{{"button_done"|translate}}</ion-button> 
+  </ion-col>
+  </ion-row> 
+	 </ion-col>
+    </ion-row>
+	</div>
+</ion-content>

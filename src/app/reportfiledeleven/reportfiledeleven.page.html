@@ -1,0 +1,77 @@
+<ion-header class="ion-no-border" translucent>
+    <div class="header-background"></div>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref='/reportfiledten' icon="undefined" text="" class="backbutton"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="newbg">
+    <div class="mainareain">
+        <form [formGroup]="addressForm">
+            <ion-row>
+                <ion-col size="12">
+                    <div class="newtext">
+                        <h4>You’re doing great. Just one more step to go!</h4>
+                        <h5>Please enter the location where the incident took place<span class="red">*</span></h5>
+
+                        <ion-list>
+
+                            <ion-item>
+                                <ion-label position="stacked">Building, Locality, Street name, Area</ion-label>
+                                <ion-input type="text" placeholder="Write here" id="autocomplete" (ionChange)="getlatlong()" formControlName="locality"></ion-input>
+                            </ion-item>
+
+                            <ion-item>
+                                <ion-label position="stacked">Landmark</ion-label>
+                                <ion-input type="text" placeholder="Write here" disabled="{{landmark_disable}}" (ionChange)="getlatlong()" formControlName="landmark"></ion-input>
+                            </ion-item>
+
+                            <ion-item>
+                                <ion-label position="stacked">Area/Suburb</ion-label>
+                                <ion-input type="text" placeholder="Write here" disabled="{{area_disable}}" (ionChange)="getlatlong()" formControlName="area"></ion-input>
+                            </ion-item>
+
+                            <p class="error" *ngIf="!addressForm.controls.area.valid  && (addressForm.controls.area.dirty || addressForm.get('area').touched)">
+                                Field is required</p>
+
+                            <ion-item>
+                                <ion-label position="stacked">City</ion-label>
+                                <ion-input type="text" placeholder="Write here" disabled="{{city_disable}}" (ionChange)="getlatlong()" formControlName="city"></ion-input>
+                            </ion-item>
+
+                            <p class="error" *ngIf="!addressForm.controls.city.valid  && (addressForm.controls.city.dirty || addressForm.get('city').touched)">
+                                Field is required</p>
+
+                            <ion-item>
+                                <ion-label position="stacked">State</ion-label>
+                                <ion-input type="text" placeholder="Write here" disabled="{{state_disable}}" (ionChange)="getlatlong()" formControlName="state"></ion-input>
+                            </ion-item>
+
+                            <ion-item>
+                                <ion-label position="stacked">Country</ion-label>
+                                <ion-input type="text" placeholder="Write here" disabled="{{country_disable}}" (ionChange)="getlatlong()" formControlName="country"></ion-input>
+                            </ion-item>
+
+                            <p class="error" *ngIf="!addressForm.controls.country.valid  && (addressForm.controls.country.dirty || addressForm.get('country').touched)">
+                                Field is required</p>
+
+                        </ion-list>
+
+                        <p>An exact location will help us identify patterns of violence across the city</p>
+                    </div>
+                </ion-col>
+            </ion-row>
+
+            <div class="bottom">
+                <ion-row>
+                    <ion-col col-12>
+                        <ion-button expand="full" shape="round" class="newbtn" (click)="goToFieldTwelve()" [disabled]="!addressForm.valid">NEXT</ion-button>
+                    </ion-col>
+                </ion-row>
+            </div>
+
+        </form>
+    </div>
+</ion-content>

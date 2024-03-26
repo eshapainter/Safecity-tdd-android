@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" >
+   <ion-back-button  icon="undefined" text=""  class="backbutton"></ion-back-button>
+   </ion-buttons>
+    <ion-title>{{'settings' | translate}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-row >
+      <ion-col size="12">
+   <ion-list class="newsetting">
+  
+  <!-- <ion-item (click)="country()"> -->
+    <!-- <ion-label>{{'country' | translate}}</ion-label> -->
+  <!-- </ion-item> -->
+<ion-item (click)="country()">
+    <ion-label>{{'location' | translate}}</ion-label>
+  </ion-item>
+  <ion-item (click)="language()">
+    <ion-label>{{'language' | translate}}</ion-label>
+  </ion-item>
+   <ion-item (click)="organization()">
+    <ion-label>{{'organization' | translate}}</ion-label>
+  </ion-item>
+  <ion-item (click)="privacy()">
+    <ion-label>{{'privacy_policy' | translate}}</ion-label>
+  </ion-item>
+  <ion-item (click)="term()">
+    <ion-label>{{'terms_and_condition' | translate}}</ion-label>
+  </ion-item>
+
+ 
+</ion-list>
+</ion-col>
+   </ion-row>
+
+
+
+</ion-content>

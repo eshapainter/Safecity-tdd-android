@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button icon="undefined" text="" class="backbutton"></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{'organization' | translate}}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="mainarea">
+        <ion-row>
+            <ion-col col-12>
+                <div class="newselect">
+
+                    <ion-item (click)="verifyAlert()">
+                        <ion-label class="newlabel" position="stacked">{{'select_your_organization' | translate}}
+                        </ion-label>
+                        <ion-select placeholder="{{'select_one' | translate}}" mode="ios" (ionChange)="selectOrg($event)">
+                            <ion-select-option *ngFor="let item of orgzationList" value="{{item.id}},{{item.passcode}}">{{item.name}}</ion-select-option>
+
+                        </ion-select>
+                    </ion-item>
+
+                </div>
+            </ion-col>
+        </ion-row>
+
+    </div>
+</ion-content>

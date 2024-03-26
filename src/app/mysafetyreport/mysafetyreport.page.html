@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+  <ion-buttons slot="start" >
+   <ion-back-button defaultHref='/viewsafety' icon="undefined" text=""  class="backbutton"></ion-back-button>
+   </ion-buttons>
+    <div class="sidearea" slot="end">
+<h5 (click)="edit()"> {{'map_edit_option' | translate }}</h5> 
+<h5 (click)="presentAlertRadio()"> {{'delete' | translate}}</h5> 
+</div>   
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="mainsafety">
+<ion-row >
+      <ion-col size="12">
+<div class="newtext">
+<ion-row >
+      <ion-col size="12">
+<h4>{{title}}</h4>
+ </ion-col>
+   
+   </ion-row>
+ <ion-row >
+      <ion-col size="12">
+ <div class="newcalendarin">
+<img src="assets/images/icons/calendar.svg"/>
+ <p>{{getDaysAgo}} {{time2}}</p></div>
+ <div class="newcalendarin">
+       <img src="assets/images/icons/location.svg"/>
+       <p>{{location}}</p>
+	   </div>
+<p>{{disc}}</p>
+</ion-col>
+   </ion-row>
+   </div>
+    </ion-col>
+   </ion-row>
+   </div>
+</ion-content>

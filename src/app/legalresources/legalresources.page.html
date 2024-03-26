@@ -1,0 +1,53 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button  icon="undefined" text="" class="backbutton"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{'legal_menu' | translate}}</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <div class="mainlegal">
+    <ion-row>
+      <ion-col size="12">
+        <div class="segmentarea">
+          <div class="btnarea " (click)="police()">
+            {{'police' | translate}}
+          </div>
+          <div class="btnarea btnareaactive">
+            {{'legal_menu' | translate}}
+          </div>
+        </div>
+
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <!-- <form [formGroup]="form"> -->
+          <div class="newlegal">
+            <ion-item>
+              <ion-label class="newlabel" position="stacked">{{'home_country_your_country' | translate}}</ion-label>
+              <ion-select placeholder="Select One" [(ngModel)]="country" (ionChange)="getCountry($event)">
+                <ion-select-option *ngFor="let item of country_list" value="{{item.country_id}}">{{item.country_name}}
+                </ion-select-option>
+              </ion-select>
+            </ion-item>
+          </div>
+        <!-- </form> -->
+      </ion-col>
+    </ion-row>
+
+  </div>
+  <div class="newitemarea">
+    <ion-item lines="none" class="cardtext" (click)="ipc()">
+      <ion-label>{{'legal_submenu_ipc' | translate}}</ion-label>
+      <img slot="end" src="assets/images/icons/rightarrow.svg" />
+    </ion-item>
+    <ion-item lines="none" class="cardtext" (click)="fir()">
+      <ion-label>{{'legal_submenu_fir' | translate}}</ion-label>
+      <img slot="end" src="assets/images/icons/rightarrow.svg" />
+    </ion-item>
+  </div>
+</ion-content>

@@ -1,0 +1,125 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref='/tabs/home' icon="undefined" text="" class="backbutton"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Incidents Shared by Others</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- content of all records -->
+<ion-content *ngIf = "showAllList">
+  <div class="tips">
+    <!-- <ion-row>
+      <ion-col size="12">
+	  <div class="newtext">
+	  <p>Filters :</p>
+	  <ion-chip fill="outline">
+  <ion-label>Thane</ion-label>
+  <ion-icon name="close"></ion-icon>
+</ion-chip>
+
+</div>
+  </ion-col>
+    </ion-row> -->
+
+    <ion-row *ngFor="let item of reportList">
+      <ion-col size="12">
+        <ion-card class="newcard" tappable (click)="reportdetail(item)">
+          <ion-card-header>
+            <ion-card-title>{{item.violence_type}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            {{item.what_happened_desc}}
+          </ion-card-content>
+          <div class="bottomcard">
+            <ion-row>
+              <ion-col size="4">
+                <div class="newcalendar">
+                  <img src="assets/images/icons/calendar.svg" />
+                  <p>{{item.added_date}}</p>
+                </div>
+              </ion-col>
+              <ion-col size="8">
+                <div class="newcalendar">
+                  <img src="assets/images/icons/location.svg" />
+                  <p>{{item.location}}</p>
+                </div>
+
+              </ion-col>
+            </ion-row>
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row *ngIf = "resultNotFound">
+      <ion-col size="12">
+      <div class="notfound">
+      <p>No Data Found</p>
+      </div>
+      </ion-col>
+    </ion-row>
+
+  </div>
+</ion-content>
+
+<!-- // content of filter -->
+<ion-content *ngIf="showList">
+  <div class="tips">
+    <ion-row>
+   <ion-col size="12">
+        <div class="newtext">   
+          <p>Filters:</p>
+          <ion-chip fill="outline"  *ngFor="let item of violenceType;index as i">
+            <ion-label *ngIf= 'violenceType != []' >{{item}}</ion-label>
+            <ion-icon name="close" (click)="close(i,'violence_type')"></ion-icon>
+          </ion-chip>
+          <ion-chip fill="outline"  *ngFor="let item of address;index as i">
+            <ion-label *ngIf= 'address != []' >{{item}}</ion-label>
+            <ion-icon name="close" (click)="close(i,'address')"></ion-icon>
+          </ion-chip>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row >
+      <ion-col size="12" *ngFor="let item of reportList">
+        <ion-card class="newcard" tappable (click)="reportdetail(item)">
+          <ion-card-header>
+            <ion-card-title>{{item.violence_type}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            {{item.what_happened_desc}}
+          </ion-card-content>
+          <div class="bottomcard">
+            <ion-row>
+              <ion-col size="4">
+                <div class="newcalendar">
+                  <img src="assets/images/icons/calendar.svg" />
+                  <p>{{item.added_date}}</p>
+                </div>
+              </ion-col>
+              <ion-col size="8">
+                <div class="newcalendar">
+                  <img src="assets/images/icons/location.svg" />
+                  <p>{{item.locality}}</p>
+                </div>
+
+              </ion-col>
+            </ion-row>
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </div>
+
+</ion-content>
+
+<div class="bottom">
+  <ion-row>
+    <ion-col col-12>
+      <ion-button expand="full" shape="round" class="newbtn" (click)="filterin()">Filter</ion-button>
+    </ion-col>
+  </ion-row>
+</div>

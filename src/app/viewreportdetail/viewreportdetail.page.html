@@ -1,0 +1,121 @@
+<!-- <ion-header>
+     <ion-toolbar>
+          <ion-buttons slot="start">
+               <ion-back-button   defaultHref='/modelreport' icon="undefined" text="" class="backbutton"></ion-back-button>
+          </ion-buttons>
+     </ion-toolbar>
+</ion-header> -->
+
+<ion-header>
+     <ion-toolbar>
+     <ion-buttons slot="start" (click)="dismiss()" >
+      <img src="assets/images/icons/leftarrow.svg" class="newback"/>
+      </ion-buttons>  
+     </ion-toolbar>
+</ion-header>
+
+<ion-content>
+     <div class="mainareain">
+          <ion-row>
+               <ion-col size="12">
+                    <div class="newtext">
+                         <h4>{{violence_type}}</h4>
+                         <h3>{{age}} {{'yrs' | translate }}
+                         <span *ngIf="gender != 'Prefer not to say'"> | {{gender}}</span></h3>
+                         <p>{{what_happened_desc}}</p>
+                         <h5 *ngIf='showPerpetrator'>{{'showPerpetrator' | translate }}: {{perpetrator}}</h5>
+                         <h5 *ngIf='showAttacked'>{{'showAttacked' | translate }}: {{feel_attacked}}</h5>
+                         <h5 *ngIf="additional_detail != ''">{{'additional_detail' | translate }}: {{additional_detail}}</h5>
+
+                         <ion-item *ngIf='show1'>
+                              <ion-thumbnail slot="start">
+                                   <img src="assets/images/icons/policereport.svg" />
+                              </ion-thumbnail>
+                              <ion-label>
+                                   {{'police_Report_filed' | translate}}
+                              </ion-label>
+                         </ion-item>
+
+                         <ion-item *ngIf='show2'>
+                              <ion-thumbnail slot="start">
+                                   <img src="assets/images/icons/policereport.svg" />
+                              </ion-thumbnail>
+                              <ion-label>
+                                   {{'police_reprt_not_filed' | translate}}
+                              </ion-label>
+                         </ion-item>
+
+                         <ion-item *ngIf='show3'>
+                              <ion-thumbnail slot="start">
+                                   <img src="assets/images/icons/policereport.svg" />
+                              </ion-thumbnail>
+                              <ion-label>
+                                   {{'tried_to_filed' | translate }} {{other_ans}}
+                              </ion-label>
+                         </ion-item>
+
+                         <ion-item *ngIf='show4'>
+                              <ion-thumbnail slot="start">
+                                   <img src="assets/images/icons/policereport.svg" />
+                              </ion-thumbnail>
+                              <ion-label>
+                                  {{'intent_to_filed' | translate }}
+                              </ion-label>
+                         </ion-item>
+
+                         <ion-item *ngIf='show5'>
+                              <ion-thumbnail slot="start">
+                                   <img src="assets/images/icons/policereport.svg" />
+                              </ion-thumbnail>
+                              <ion-label>
+                                   {{'not_sure' | translate}}
+                              </ion-label>
+                         </ion-item>
+
+                         <ion-item *ngIf="rece_medi_attn">
+                              <ion-thumbnail slot="start">
+                                   <img src="assets/images/icons/medical.svg" />
+                              </ion-thumbnail>
+                              <ion-label>
+                                   {{'medical_help_received' | translate }}
+                              </ion-label>
+                         </ion-item>
+
+                         <ion-item *ngIf="rece_medi_not_attn">
+                              <ion-thumbnail slot="start">
+                                   <img src="assets/images/icons/medical.svg" />
+                              </ion-thumbnail>
+                              <ion-label>
+                                   {{'medical_hlp_noy_rcvd' | translate}}
+                              </ion-label>
+                         </ion-item>
+
+                         <ion-item>
+                              <ion-thumbnail slot="start">
+                                   <img src="assets/images/icons/location.svg" />
+                              </ion-thumbnail>
+                              <ion-label>
+                                   {{suburb}}
+                              </ion-label>
+                         </ion-item>
+                         <ion-item>
+                              <ion-thumbnail slot="start">
+                                   <img src="assets/images/icons/calendar.svg" />
+                              </ion-thumbnail>
+                              <ion-label>
+                                   {{incidents_date_est}} {{date_estimate_name}}
+                              </ion-label>
+                         </ion-item>
+                         <ion-item>
+                              <ion-thumbnail slot="start">
+                                   <img src="assets/images/icons/time.svg" />
+                              </ion-thumbnail>
+                              <ion-label>
+                                   {{incidents_time_est}} {{time_estimate_name}}
+                              </ion-label>
+                         </ion-item>
+                    </div>
+               </ion-col>
+          </ion-row>
+     </div>
+</ion-content>

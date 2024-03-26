@@ -1,0 +1,63 @@
+<ion-header class="ion-no-border">
+ <ion-toolbar>
+   <ion-buttons slot="start" >
+   <ion-back-button defaultHref='/modelreport' icon="undefined" text="" (click)="dismiss()"  class="backbutton"></ion-back-button>
+  </ion-buttons>
+  <ion-title>{{'home_all_filters' | translate}}</ion-title>
+  <div  class="newsidetext" slot="end" tappable (click)="deselect()">
+   <p>{{'button_clear' | translate }} {{'home_all_filters' | translate}}</p>
+    </div>
+
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<div class="newlist">
+   <ion-card class="newcard">
+        <ion-row>
+          <ion-col size="12">
+ <h5 class="newhead">{{'home_show_incident_from' | translate }}</h5>
+		  <div class="newfilter">
+  <ion-list>
+  <ion-radio-group  mode="md" (ionChange)="getValue($event)" [(ngModel)] = 'safetyFrom'>
+   <ion-item>
+      <ion-label>{{'home_all_time' | translate }}</ion-label>
+      <ion-radio slot="end" value="all"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{'home_today' | translate}}</ion-label>
+      <ion-radio slot="end" value="today"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>{{'home_this_week' | translate}}</ion-label>
+      <ion-radio slot="end" value="week"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>{{'home_this_month' | translate }}</ion-label>
+      <ion-radio slot="end" value="month"></ion-radio>
+    </ion-item>
+	
+    <ion-item>
+      <ion-label>{{'home_this_year' | translate }}</ion-label>
+      <ion-radio slot="end" value="year"></ion-radio>
+    </ion-item>
+  </ion-radio-group>
+  
+</ion-list>
+        
+   </div>
+     </ion-col>
+        </ion-row>
+ </ion-card>
+ </div>
+
+</ion-content>
+ <div class="bottom">
+<ion-row>
+     <ion-col col-12>
+
+<ion-button expand="full" shape="round"  class="newbtn" (click)=" goToSafetyTipViewPage()" [disabled]="buttondisable">{{'button_apply' | translate }}</ion-button>
+  </ion-col>
+   </ion-row>
+</div>

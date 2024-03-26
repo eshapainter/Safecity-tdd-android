@@ -1,0 +1,148 @@
+.header-md ion-title
+{
+text-align:center;
+}
+
+.header-ios .toolbar-ios:last-child .toolbar-background-ios
+{
+border:0;
+
+}
+
+ion-header
+{
+-webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+-moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+}
+
+
+.header-md::after
+{
+background:transparent;
+}
+
+.header-ios ion-toolbar:last-of-type
+{
+--border-width: 0 0 0;
+}
+ion-title
+{
+color:#2F1153;
+font-size:20px;
+left: 0px;
+    top: 0px;
+    padding-left: 90px;
+    padding-right: 90px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translateZ(0px);
+font-weight: 400;
+    text-align: center;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+.backbutton
+{
+background-image: url(/assets/images/icons/leftarrow.svg);
+width:25px;
+background-position: 50% 50%;
+background-repeat: no-repeat;
+height:25px;
+
+}
+
+.sc-ion-buttons-md-s .button {
+margin-left:0;
+}
+
+.sc-ion-buttons-ios-s .button {
+margin-left:4px;
+}
+
+.header-ios ion-toolbar
+{
+--padding-top: 3px;
+    --padding-bottom: 3px;
+    --padding-start: 4px;
+    --padding-end: 4px;
+    --min-height:75px;}
+	
+	.header-md ion-toolbar
+{
+--padding-top: 3px;
+    --padding-bottom: 3px;
+    --padding-start: 4px;
+    --padding-end: 4px;
+    --min-height:75px;}
+	
+	.mainareain
+{
+width:100%;
+height:auto;
+margin-top:18px;
+}
+.newtext
+{
+width:100%;
+height:auto;
+padding:0 23px;
+text-align:left;
+color:#220E0E;
+margin-top:0;
+}
+
+.newtext p
+{
+width:100%;
+height:auto;
+line-height:20px;
+font-size:16px;
+color:#181719;
+margin-top:10px;
+}
+
+.newtext h4
+{
+width:100%;
+height:auto;
+font-weight:400;
+font-size:25px;
+color:#592D8D;
+margin-bottom: 15px;
+}
+
+.newcalendar
+	{
+	width:100%;
+display:inline-flex;
+margin-bottom:18px;
+	}
+	.newcalendar p{
+	font-size:14px;
+	margin-top:5px;
+	margin-bottom:0;
+	}
+	
+	
+	
+	.newcalendar img
+	{
+	width:17px;
+	margin-right:2px;
+	}
+	
+	@media (device-height : 568px) 
+   and (device-width : 320px) 
+   and (-webkit-min-device-pixel-ratio: 2)
+ {
+ ion-title
+{
+   padding-left: 60px;
+    padding-right: 60px;
+} 
+}
+

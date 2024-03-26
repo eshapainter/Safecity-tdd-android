@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+  <ion-buttons slot="start" >
+   <ion-back-button defaultHref='/safteytipone' icon="undefined" text=""  class="backbutton"></ion-back-button>
+   </ion-buttons>
+    <ion-title><div class="ion-text-wrap">Submit a Safety Tip</div></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="safteytipone">
+<ion-row >
+      <ion-col size="12">
+<div class="newsafteytipone">
+<h5>{{'map_move_pin' | translate }}:</h5>
+<div #map id="map"></div>
+  </div>
+    </ion-col>
+   </ion-row>
+   </div>
+   <ion-row>
+     <ion-col col-12>
+
+<ion-button expand="full" shape="round"  class="safebtnin" (click)="safetytip()">{{'next' | translate }}</ion-button>
+  </ion-col>
+   </ion-row>
+</ion-content>
+ <!-- <div class="bottom"> -->
+
+<!-- </div> -->

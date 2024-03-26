@@ -1,0 +1,46 @@
+<ion-header class="ion-no-border">
+<div class="header-background"></div>
+  <ion-toolbar>
+   <ion-buttons slot="start" >
+   <ion-back-button defaultHref='/preframingtwo' icon="undefined" text=""  class="backbutton"></ion-back-button>
+   </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="newbg">
+<div class="mainareain">
+<ion-row >
+      <ion-col size="12">
+<div class="newtext">
+<h4>Who are you reporting for</h4>
+ <ion-list>
+  <ion-radio-group (ionChange)="buttonSelect($event)">
+
+    <ion-item>
+      <ion-label>Myself</ion-label>
+      <ion-radio  value="myself" ></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Someone else</ion-label>
+      <ion-radio  value="someoneelse"></ion-radio>
+    </ion-item>
+
+  </ion-radio-group>
+</ion-list>
+<p>In case you are reporting for someone else, please make sure you answer the questions on their behalf</p>
+   </div>
+    </ion-col>
+   </ion-row>
+      <ion-row>
+     <ion-col col-12>
+
+<ion-button expand="full" shape="round"  class="newbtn" (click)="goToFieldSecond()" [disabled]="buttonDisabled">NEXT</ion-button>
+  </ion-col>
+   </ion-row>
+   </div>
+
+</ion-content>
+<!-- <div class="bottom"> -->
+
+<!-- </div> -->

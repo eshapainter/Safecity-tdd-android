@@ -1,0 +1,74 @@
+<ion-header class="ion-no-border">
+    <div class="header-background"></div>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref='/preframingtwo' icon="undefined" text="" class="backbutton"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="newbg">
+    <div class="mainareain">
+        <ion-row>
+            <ion-col size="12">
+                <div class="newtext">
+                    <h4>What was the nature of the assault?*</h4>
+                    <ion-list (ionChange)=getLed($event)>
+                        <ion-item>
+                            <ion-label>Physical Abuse</ion-label>
+                            <ion-checkbox slot="end" value='1'></ion-checkbox>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>Sexual abuse, including but not limited to, rape</ion-label>
+                            <ion-checkbox slot="end" value='2'></ion-checkbox>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>Stalking or tracking your whereabouts</ion-label>
+                            <ion-checkbox slot="end" value='3'></ion-checkbox>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>Verbal Abuse</ion-label>
+                            <ion-checkbox slot="end" value='Verbal'></ion-checkbox>
+                        </ion-item>
+                        <ion-list *ngIf="otherFieldData" class="newin">
+                            <ion-item>
+                                <ion-label>Blackmail</ion-label>
+                                <ion-checkbox slot="end" value='Blackmail'></ion-checkbox>
+                            </ion-item>
+                            <ion-item>
+                                <ion-label>Humiliation in presence of others</ion-label>
+                                <ion-checkbox slot="end" value='Humiliation'></ion-checkbox>
+                            </ion-item>
+                            <ion-item>
+                                <ion-label>Threatening words, messages, letters</ion-label>
+                                <ion-checkbox slot="end" value='Threatening'></ion-checkbox>
+                            </ion-item>
+                        </ion-list>
+                        <ion-item>
+                            <ion-label>Mental or Emotional Abuse</ion-label>
+                            <ion-checkbox slot="end" value='5'></ion-checkbox>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>Imposing restrictions</ion-label>
+                            <ion-checkbox slot="end" value='6'></ion-checkbox>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>Others</ion-label>
+                            <ion-checkbox slot="end" value='7'></ion-checkbox>
+                        </ion-item>
+
+                    </ion-list>
+
+                </div>
+            </ion-col>
+        </ion-row>
+    </div>
+</ion-content>
+<div class="bottom">
+    <ion-row>
+        <ion-col col-12>
+
+            <ion-button expand="full" shape="round" class="newbtn">NEXT</ion-button>
+        </ion-col>
+    </ion-row>
+</div>

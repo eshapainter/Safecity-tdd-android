@@ -1,0 +1,95 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+   <ion-buttons slot="start" >
+   <ion-back-button defaultHref='/help' icon="undefined" text=""  class="backbutton"></ion-back-button>
+  </ion-buttons>
+  <ion-title ><div class="ion-text-wrap">{{'police_near_your_location' | translate}}</div></ion-title>
+  </ion-toolbar>
+ 
+</ion-header>
+
+<ion-content>
+ <div class="newtop">
+<div class="segmentarea">
+		 <div class="btnarea btnareaactive">
+      {{'police' | translate}}
+		 </div>
+		  <div class="btnarea" (click)="legal()">
+        {{'legal_menu' | translate}}
+		 </div>
+		 </div>
+		 </div>
+<div class="policelist">
+<ion-row >
+      <ion-col size="12">
+	  <ion-item>
+ <p slot="start">
+   {{'map_location' | translate}}
+  </p>
+  <ion-label>{{address}}</ion-label>
+  <ion-button slot="end" class="newedit" (click)="police()">
+    {{'map_edit_option' | translate}}
+  </ion-button>
+</ion-item>
+	   </ion-col>
+   </ion-row>
+      <ion-row >
+      <ion-col size="12">
+<div class="mainlistingtext">
+<!-- <h5>Please move the pin to the exact location:</h5> -->
+<div #map id="map"></div>
+<ion-card class="cardarea" *ngFor="let item of markers">
+  <h2><span><img [src]=item.imgsrc/></span>{{item.name}}</h2>
+   <div class="sidearea">
+  <img  (click)="call(item.place_id)" src="assets/images/icons/call.svg"/>
+  <img (click)="direction(item)" src="assets/images/icons/direction.svg"/>
+  </div> 
+  <div class="rating">
+  <h6>{{item.rating}}</h6>
+  <ng-template [ngIf]="item.rating > '1'" [ngIfElse]="star1">
+    <ion-icon name="star"  class="newicon"></ion-icon>
+  </ng-template>
+  <ng-template #star1>
+    <ion-icon name="star"  ></ion-icon>
+  </ng-template>
+  
+  <ng-template [ngIf]="item.rating > '1.5'" [ngIfElse]="star2">
+    <ion-icon name="star"  class="newicon"></ion-icon>
+  </ng-template>
+  <ng-template #star2>
+    <ion-icon name="star" ></ion-icon>
+  </ng-template>
+  
+  <ng-template [ngIf]="item.rating > '2.5'" [ngIfElse]="star2">
+    <ion-icon name="star"  class="newicon"></ion-icon>
+  </ng-template>
+  <ng-template #star2>
+    <ion-icon name="star"  ></ion-icon>
+  </ng-template>
+  
+  <ng-template [ngIf]="item.rating > '3.5'" [ngIfElse]="star2">
+    <ion-icon name="star"  class="newicon"></ion-icon>
+  </ng-template>
+  <ng-template #star2>
+    <ion-icon name="star"  ></ion-icon>
+  </ng-template>
+  
+  <ng-template [ngIf]="item.rating > '4.5'" [ngIfElse]="star2">
+    <ion-icon name="star"  class="newicon"></ion-icon>
+  </ng-template>
+  <ng-template #star2>
+    <ion-icon name="star"  ></ion-icon>
+  </ng-template>
+  
+  
+  
+  </div>
+  <p>{{item.vicinity}}</p>
+  <h4>Open 24 hours</h4>
+  </ion-card>
+  </div>
+    </ion-col>
+   </ion-row>
+      </div>
+
+</ion-content>

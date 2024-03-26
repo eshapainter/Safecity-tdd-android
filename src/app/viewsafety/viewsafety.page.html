@@ -1,0 +1,99 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref='/tabs/home' icon="undefined" text="" class="backbutton"></ion-back-button>
+    </ion-buttons>
+    <ion-title>View Safety Tips</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content *ngIf = "showAllList">
+  <div class="tips">
+  
+    <ion-row *ngFor="let item of SaftyTipList">
+      <ion-col size="12">
+        <ion-card class="newcard" tappable (click)="safteydetail(item)">
+          <ion-card-header>
+            <ion-card-title>{{item.safety_tip_title}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            {{item.safety_tip_desc}}
+          </ion-card-content>
+          <div class="bottomcard">
+            <ion-row>
+              <ion-col size="4">
+                <div class="newcalendar">
+                  <img src="assets/images/icons/calendar.svg" />
+                  <p>{{item.added_date}}</p>
+                </div>
+              </ion-col>
+              <ion-col size="8">
+                <div class="newcalendar">
+                  <img src="assets/images/icons/location.svg" />
+                  <p>{{item.city}}, {{item.location}}</p>
+                </div>
+
+              </ion-col>
+            </ion-row>
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>
+
+<ion-content *ngIf="showList">
+  <div class="tips">  
+  <ion-row >
+      <ion-col size="12">
+	  <div class="newtext">
+	  <p>Filters :</p>
+	  <ion-chip fill="outline" (click)='close()'>
+  <ion-label>{{address}}</ion-label>
+  <ion-icon name="close"></ion-icon>
+</ion-chip>
+	 
+</div>
+  </ion-col>
+    </ion-row>
+    <ion-row *ngFor="let item of SaftyTipSearchList">
+      <ion-col size="12">
+        <ion-card class="newcard" tappable (click)="safteydetail(item)">
+          <ion-card-header>
+            <ion-card-title>{{item.safety_tip_title}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            {{item.safety_tip_desc}}
+          </ion-card-content>
+          <div class="bottomcard">
+            <ion-row>
+              <ion-col size="4">
+                <div class="newcalendar">
+                  <img src="assets/images/icons/calendar.svg" />
+                  <p>{{item.added_date}}</p>
+                </div>
+              </ion-col>
+              <ion-col size="8">
+                <div class="newcalendar">
+                  <img src="assets/images/icons/location.svg" />
+                  <p>{{item.city}}, {{item.location}}</p>
+                </div>
+
+              </ion-col>
+            </ion-row>
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>
+
+<div class="bottom">
+<ion-row>
+     <ion-col col-12>
+
+<ion-button expand="full" shape="round"  class="newbtn" (click)="safteyfilter()" >Filter</ion-button>
+  </ion-col>
+   </ion-row>
+</div>

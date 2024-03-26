@@ -1,0 +1,33 @@
+
+<ion-content>
+  <div class="mainarea">
+    <img src="assets/images/icons/logo.svg" />
+    <ion-row>
+      <ion-col col-12>
+
+        <div class="newselect">
+        
+		<ion-item mode="ios">
+		 <ion-label class="newlabel" position="stacked">{{'enter_verifi' | translate }}
+            </ion-label>
+         <ion-input  (ionChange) = "verification($event)"></ion-input>
+        </ion-item>
+		    <span >{{'please_enter' | translate }}</span>
+        </div>
+
+      </ion-col>
+    </ion-row>
+
+  </div>
+ <div class="bottom">
+  <ion-row>
+    <ion-col col-12>
+      <ion-button expand="full" shape="round" class="newbtn" (click)="language()" [disabled]="buttondisable" >{{'verify' | translate}}
+      </ion-button>
+    </ion-col>
+  </ion-row>
+  </div>
+</ion-content>
+<!-- <div class="bottom"> -->
+
+<!-- </div> -->

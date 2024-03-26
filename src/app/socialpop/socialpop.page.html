@@ -1,0 +1,54 @@
+<ion-header [translucent]="true" class="ion-no-border" mode="md">
+    <ion-toolbar>
+        <ion-title>
+            Share
+        </ion-title>
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="newsocialin">
+        <ion-row>
+            <ion-col size="4">
+                <div (click)="whatsapp()" class="socialimgin">
+                    <img src="assets/images/icons/socialwhat.svg" />
+                    <p>WhatsApp</p>
+                </div>
+            </ion-col>
+            <ion-col size="4">
+                <div (click)="insta()" class="socialimgin">
+                    <img src="assets/images/icons/socialinsat.svg" />
+                    <p>Instagram</p>
+                </div>
+            </ion-col>
+            <ion-col size="4">
+                <div (click)="facebook()" class="socialimgin">
+                    <img src="assets/images/icons/socialimg.svg" />
+                    <p>Facebook</p>
+                </div>
+            </ion-col>
+            <ion-col size="4">
+                <div (click)="twitter()" class="socialimgin">
+                    <img src="assets/images/icons/socialtwitter.svg" />
+                    <p>Twitter</p>
+                </div>
+            </ion-col>
+            <ion-col size="4">
+                <div (click)="email()" class="socialimgin">
+                    <img src="assets/images/icons/socialmail.svg" />
+                    <p>Mail</p>
+                </div>
+            </ion-col>
+            <ion-col size="4">
+                <div (click)="sms()" class="socialimgin">
+                    <img src="assets/images/icons/socialmessage.svg" />
+                    <p>Message</p>
+                </div>
+            </ion-col>
+        </ion-row>
+    </div>
+    <div class="socialbtnin">
+        <ion-button (click)="pop()" class="socbtn" fill="clear">Cancel</ion-button>
+    </div>
+</ion-content>

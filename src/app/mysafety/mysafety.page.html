@@ -1,0 +1,62 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button  icon="undefined" text="" class="backbutton"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      <div class="ion-text-wrap">{{'safety_shared_by_me' | translate }}</div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <div class="notfoundin" *ngIf = "safetyTipList == ''">
+    <p>{{'No_safety_tips_found' | translate}}</p>
+   </div>
+
+  <div class="tips">
+    <ion-row *ngIf = "safetyTipList !=''">
+      <ion-col size="12">
+        <ion-card class="newcardin" tappable (click)="detail(item.id)" *ngFor="let item of safetyTipList">
+          <ion-card-header>
+            <ion-card-title>
+              <ion-row>
+                <ion-col size="12">{{item.safety_tip_title}}</ion-col>
+              </ion-row>
+            </ion-card-title>
+
+          </ion-card-header>
+          <ion-card-content>
+            <ion-row>
+              <ion-col size="5">
+                <div class="subheading">
+                  <h3 *ngIf = "showCity">{{'home_at' | translate}} {{item.city}}</h3>
+                  <h3 *ngIf = "showDiv">{{'home_at' | translate}} {{item.exct_lcn}}</h3>
+                </div>
+                </ion-col>
+              <ion-col size="7">
+                <div class="subheading">
+                  <h4>{{item.show_date}} {{item.show_time}}</h4>
+                </div>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="12">
+                <p>{{item.show_disc}}… <span>{{'read_more' | translate }}</span></p>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+
+        </ion-card>
+
+
+      </ion-col>
+    </ion-row>
+
+    <ion-fab vertical="bottom" class="newfab" (click)="mysafety()" horizontal="end" slot="fixed">
+      <ion-fab-button>
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </div>
+</ion-content>

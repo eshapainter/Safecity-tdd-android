@@ -1,0 +1,34 @@
+<ion-header class="ion-no-border" translucent>
+<div class="header-background"></div>
+  <ion-toolbar>
+   <ion-buttons slot="start" >
+   <ion-back-button defaultHref='/reportfiledeleven' icon="undefined" text=""  class="backbutton"></ion-back-button>
+   </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="newbg">
+<div class="mainareain">
+<ion-row >
+      <ion-col size="12">
+<div class="newtext">
+<h4>You’re doing great. Just one more step to go!</h4>
+<h5>Please move the pin to the exact location:</h5>
+<div #map id="map"></div>
+   <ion-item>
+    <ion-label>This information is true to my knowledge </ion-label>
+ <ion-checkbox  slot="start" (ionChange) = "knowledge($event)"></ion-checkbox>
+  </ion-item>
+  </div>
+    </ion-col>
+   </ion-row>
+ <div class="bottom">
+<ion-row>
+     <ion-col col-12>
+<ion-button expand="full" shape="round"  class="newbtn" (click)="preframing()">SUBMIT</ion-button>
+  </ion-col>
+   </ion-row>
+</div>
+   </div>
+
+</ion-content>

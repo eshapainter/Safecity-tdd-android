@@ -1,0 +1,36 @@
+<ion-header class="ion-no-border">
+<div class="header-background"></div>
+  <ion-toolbar>
+   <ion-buttons slot="start" >
+   <ion-back-button defaultHref='/reportfiledthree' icon="undefined" text=""  class="backbutton"></ion-back-button>
+ 
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="newbg">
+<div class="mainareain">
+<ion-row >
+      <ion-col size="12">
+<div class="newtext">
+<h4>Can you tell us what happened?<span class="red">*</span></h4>
+ <ion-list>
+    <ion-item>
+	
+     <ion-textarea  placeholder="Please type your experience here"  (ionChange)="addExperience($event)"></ion-textarea>
+    </ion-item>
+</ion-list>
+
+   </div>
+    </ion-col>
+   </ion-row>
+   </div>
+</ion-content>
+<div class="bottom">
+<ion-row>
+     <ion-col col-12>
+
+<ion-button expand="full" shape="round"  class="newbtn" (click)="report()" [disabled]="buttonDisabled">NEXT</ion-button>
+  </ion-col>
+   </ion-row>
+</div>

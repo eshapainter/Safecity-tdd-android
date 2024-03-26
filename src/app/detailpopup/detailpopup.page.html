@@ -1,0 +1,134 @@
+<ion-header class="newheader">
+     <ion-toolbar>
+          <ion-buttons slot="end">
+               <button (click)="dismiss()" ion-button class="newclose">
+                    <ion-icon name="close"></ion-icon>
+               </button>
+          </ion-buttons>
+     </ion-toolbar>
+</ion-header>
+
+<ion-content>
+     <div class="mainareain" *ngIf='type == "incident"'>
+          <ion-row>
+               <ion-col size="12">
+                    <div class="newtext">
+                         <h4>{{violence_type}}</h4>
+                         <h3>{{age}} Yrs
+                              <span *ngIf="gender != 'Prefer not to say'"> | {{gender}}</span></h3>
+                         <p>{{what_happened_desc}}</p>
+                         <h5 *ngIf='showPerpetrator'>{{"showPerpetrator" | translate}}: {{showPerpetrator}}</h5>
+                         <h5 *ngIf='showAttacked'>{{"showAttacked" | translate}}: {{feel_attacked}}</h5>
+                         <h5 *ngIf="additional_detail != ''">{{"additional_detail"| translate}}: {{additional_detail}}</h5>
+
+                         <ion-item *ngIf='show1'>
+                              <ion-thumbnail slot="start">
+                                   <img src="assets/images/icons/policereport.svg" />
+                              </ion-thumbnail>
+                              <ion-label>
+                                   {{"police_report_filed" | translate}}
+                              </ion-label>
+                         </ion-item>
+
+                         <ion-item *ngIf='show2'>
+                              <ion-thumbnail slot="start">
+                                   <img src="assets/images/icons/policereport.svg" />
+                              </ion-thumbnail>
+                              <ion-label>
+                                   {{"police_report_not_filed"| translate}}
+                              </ion-label>
+                         </ion-item>
+
+                         <ion-item *ngIf='show3'>
+                              <ion-thumbnail slot="start">
+                                   <img src="assets/images/icons/policereport.svg" />
+                              </ion-thumbnail>
+                              <ion-label>
+                                   {{"tried_to_file_police_report" | translate}} {{other_ans}}
+                              </ion-label>
+                         </ion-item>
+
+                         <ion-item *ngIf='show4'>
+                              <ion-thumbnail slot="start">
+                                   <img src="assets/images/icons/policereport.svg" />
+                              </ion-thumbnail>
+                              <ion-label>
+                                   {{"intend_to_file_police_report" | translate}}
+                              </ion-label>
+                         </ion-item>
+
+                         <ion-item *ngIf='show5'>
+                              <ion-thumbnail slot="start">
+                                   <img src="assets/images/icons/policereport.svg" />
+                              </ion-thumbnail>
+                              <ion-label>
+                                   {{"not_sure_about_filing_police_report"|translate}}
+                              </ion-label>
+                         </ion-item>
+
+                         <ion-item *ngIf="rece_medi_attn">
+                              <ion-thumbnail slot="start">
+                                   <img src="assets/images/icons/medical.svg" />
+                              </ion-thumbnail>
+                              <ion-label>
+                                   {{"medical_help_received"|translate}}
+                              </ion-label>
+                         </ion-item>
+
+                         <ion-item *ngIf="rece_medi_not_attn">
+                              <ion-thumbnail slot="start">
+                                   <img src="assets/images/icons/medical.svg" />
+                              </ion-thumbnail>
+                              <ion-label>
+                                   {{"medical_hlp_noy_rcvd" |translate}}
+                              </ion-label>
+                         </ion-item>
+
+                         <ion-item *ngIf="suburb">
+                              <ion-thumbnail slot="start">
+                                   <img src="assets/images/icons/location.svg" />
+                              </ion-thumbnail>
+                              <ion-label>
+                                   {{suburb}}
+                              </ion-label>
+                         </ion-item>
+                         <ion-item *ngIf="incidents_date_est">
+                              <ion-thumbnail slot="start">
+                                   <img src="assets/images/icons/calendar.svg" />
+                              </ion-thumbnail>
+                              <ion-label>
+                                   {{incidents_date_est}} {{date_estimate_name}}
+                              </ion-label>
+                         </ion-item>
+                         <ion-item *ngIf="incidents_time_est">
+                              <ion-thumbnail slot="start">
+                                   <img src="assets/images/icons/time.svg" />
+                              </ion-thumbnail>
+                              <ion-label>
+                                   {{incidents_time_est}} {{time_estimate_name}}
+                              </ion-label>
+                         </ion-item>
+                    </div>
+               </ion-col>
+          </ion-row>
+     </div>
+
+     <div class="mainareain" *ngIf='type == "safetyTip"'>
+          <ion-row>
+               <ion-col size="12">
+                    <div class="newtext">
+                         <h4>{{safety_tip_title}}</h4>
+                         <div class="newcalendar" *ngIf="getDaysAgo">
+                              <img src="assets/images/icons/calendar.svg" />
+                              <p>{{getDaysAgo}} | {{time}}</p>
+                         </div>
+                         <div class="newcalendar" *ngIf="exact_location">
+                              <img src="assets/images/icons/location.svg" />
+                              <p>{{exact_location}}</p>
+                         </div>
+                         <p>{{safety_tip_desc}}</p>
+                    </div>
+               </ion-col>
+          </ion-row>
+     </div>
+</ion-content>

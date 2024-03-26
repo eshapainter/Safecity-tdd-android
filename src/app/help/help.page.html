@@ -1,0 +1,59 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+   <ion-buttons slot="start" >
+   <ion-back-button defaultHref='/tabs/home' icon="undefined" text=""  class="backbutton"></ion-back-button>
+  </ion-buttons>
+  <ion-title>{{'help_menu' | translate}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="help">
+   
+<ion-row>
+ <ion-col size="12">
+  <!-- <form [formGroup]="form"> -->
+ <ion-item>
+    <ion-label class="newlabel" position="stacked">{{'emergency_number_in' | translate}}</ion-label>
+    <ion-select placeholder="{{'select_one' | translate}}" (ionChange)="onOptChange($event)"  [(ngModel)]="country">
+      <ion-select-option  *ngFor="let item of country_list" value="{{item.country_id}}">{{item.country_name}}</ion-select-option>
+    </ion-select>
+	
+  </ion-item>
+  <!-- </form> -->
+  <ion-card  *ngIf="heliplinelist.length > 0">
+  <ion-item *ngFor="let item of heliplinelist">
+    <ion-label>{{item.emergency_title}}:<h4 class="heading" (click)="call(item.emergency_no)">{{item.emergency_no}}</h4></ion-label>
+  </ion-item>
+  <!-- <ion-item >
+
+    <ion-label>Domestic Violence Helpline: <h4 class="heading">100</h4></ion-label>
+  </ion-item>
+
+  <ion-item >
+    <ion-label>Women’s Safety Hotline: <h4 class="heading">100</h4></ion-label>
+  </ion-item>
+  <ion-item>
+     <ion-label>Police Emergency Number: <h4 class="heading">100</h4></ion-label>
+  </ion-item> -->
+</ion-card>
+   </ion-col>
+    </ion-row>
+<ion-row>
+ <ion-col size="12">
+<ion-item lines="none" class="newcardhelp" (click)= "hospital()">
+  <ion-label>{{'view_hospital' | translate}}</ion-label>
+<img slot="end" src="assets/images/icons/rightarrow.svg"/>
+</ion-item>
+<ion-item lines="none" class="newcardhelp" (click)= "policein()">
+  <ion-label>{{'view_police_station' | translate}}</ion-label>
+<img slot="end" src="assets/images/icons/rightarrow.svg"/>
+</ion-item>
+<ion-item *ngIf="country_id == '101'" lines="none" class="newcardhelp" (click)= "legal()">
+  <ion-label>{{'more_legal_resources' | translate}}</ion-label>
+<img slot="end" src="assets/images/icons/rightarrow.svg"/>
+</ion-item>
+ </ion-col>
+    </ion-row>
+	</div>
+</ion-content>

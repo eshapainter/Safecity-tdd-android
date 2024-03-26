@@ -1,0 +1,283 @@
+.header-md ion-title
+{
+text-align:center;
+}
+
+.header-ios .toolbar-ios:last-child .toolbar-background-ios
+{
+border:0;
+
+}
+#map{
+    width:100%;
+    min-height:330px;
+
+    padding:0 15px;
+    }
+.newinput .newloc 
+{
+border:none;
+padding:0;
+}
+
+
+ion-header
+{
+-webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+-moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+}
+
+
+.header-md::after
+{
+background:transparent;
+}
+
+.header-ios ion-toolbar:last-of-type
+{
+--border-width: 0 0 0;
+}
+ion-title
+{
+color:#2F1153;
+font-size:20px;
+left: 0px;
+    top: 0px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translateZ(0px);
+font-weight: 500;
+    text-align: center;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+.backbutton
+{
+background-image: url(/assets/images/icons/leftarrow.svg);
+width:25px;
+background-position: 50% 50%;
+background-repeat: no-repeat;
+height:25px;
+
+}
+
+.sc-ion-buttons-md-s .button {
+margin-left:0;
+}
+
+.sc-ion-buttons-ios-s .button {
+margin-left:4px;
+}
+
+.header-ios ion-toolbar
+{
+--padding-top: 3px;
+    --padding-bottom: 3px;
+    --padding-start: 4px;
+    --padding-end: 4px;
+    --min-height:75px;}
+	
+	.header-md ion-toolbar
+{
+--padding-top: 3px;
+    --padding-bottom: 3px;
+    --padding-start: 4px;
+    --padding-end: 4px;
+    --min-height:75px;}
+ion-select {
+
+border:1px solid #ddd;
+height:40px;
+
+}
+  ion-item
+  {
+  --padding-start: 0;
+  --inner-padding-end: 0;
+  margin-bottom:18px;
+  }
+  
+.select-text button
+{padding:1px 0 !important;
+}
+
+.in-item {
+    position: static;
+    max-width: 100%;
+	padding-left:15px;
+	padding-right:15px;
+	}
+	
+	.item 
+	{
+	--inner-border-width: 0px 0px 0px 0px;
+	--border-width: 0 0 0px 0;
+	border:none;
+	}
+
+ion-select{
+width:100%;
+    margin-top: 0;
+	white-space:inherit;
+}
+
+.select-placeholder 
+{
+min-width:100% !important;
+width:100% !important;
+flex:0  !important;
+}
+
+.newbg
+{
+width:100%;
+height:auto;
+padding:0 20px;
+margin-top:25px;
+margin-bottom: 0;
+}
+ion-input
+{
+--background:#ffffff;
+border:1px solid #E1D8EB;
+font-size:14px;
+border-radius:3px;
+--padding-start: 8px !important;
+margin-top:0;
+   min-height: 40px
+}
+
+.item .sc-ion-label-ios-h{
+margin-bottom:10px;
+}
+.item .sc-ion-label-md-h{
+margin-bottom:10px;
+}
+ion-textarea
+{
+--background:#ffffff;
+border:1px solid #E1D8EB;
+font-size:14px;
+border-radius:3px;
+--padding-start: 8px !important;
+margin-top:0;
+   min-height: 40px
+}
+
+.alert-radio-label.sc-ion-alert-md
+{
+white-space:inherit;
+}
+
+.alert-radio-label.sc-ion-alert-ios
+{
+white-space:inherit;
+}
+
+ion-alert.alert-radio-button
+{
+white-space:inherit!important;
+}
+
+.my-custom-class .alert-radio-button
+{
+border-bottom:1px solid #ddd;
+}
+
+.newbtn
+{
+
+color:#fff !important;
+--border-radius: 4px;
+font-size:16px;
+height:50px;
+--background: #592D8D;
+--background-activated: #592D8D;
+    --background-focused: #592D8D;
+    --background-hover: #592D8D;
+    --background-activated-opacity: 1;
+    --background-focused-opacity: 1;
+    --background-hover-opacity: 1;
+width:100%;
+ font-weight:500;
+ margin-top:0;
+text-transform: uppercase;
+display:inline-block;
+margin:35px auto 140px;
+--box-shadow:0;
+text-align:center;
+}
+
+
+.newinput img{
+   margin-top: 0;
+    margin-inline-start: 0;
+    border: 1px solid #ddd;
+    padding: 8px;
+    margin-bottom: 0;
+    border-left: 0;
+    border-radius: 0 3px 3px 0;
+	margin-inline-end: 0;
+}
+
+.newarea
+{
+display:inline-flex;
+width:100%;
+}
+.label-stacked.sc-ion-label-ios-h
+{
+transform:inherit;
+white-space:inherit;
+font-size:15px;
+}
+.label-stacked.sc-ion-label-md-h
+{
+transform:inherit;
+white-space:inherit;
+font-size:15px;
+}
+.alert-radio-label.sc-ion-alert-md
+{
+white-space:inherit;
+}
+.alert-radio-group.alert-radio-label{
+
+white-space:inherit;
+} 
+
+.label-stacked.sc-ion-label-ios-h
+{
+transform:inherit;
+white-space:inherit;
+}
+
+.newinput ion-input
+{
+   border-radius:3px 0px 0px 3px;
+}
+
+.newinput ion-datetime
+{
+   border-radius:3px 0px 0px 3px;
+}
+
+ion-datetime
+{
+--background:#ffffff;
+border:1px solid #E1D8EB;
+font-size:14px;
+border-radius:3px;
+--padding-start: 8px !important;
+margin-top:0;
+   --min-height: 40px;
+   --padding-top: 12px;
+}
+
+

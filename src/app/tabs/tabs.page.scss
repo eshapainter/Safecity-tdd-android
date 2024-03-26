@@ -1,0 +1,170 @@
+ .tabs-ios {a[aria-selected=false]{
+		span {
+         color: #778391;}
+        .tab-button-icon[aria-label="home"] {
+          background-image: url(/assets/images/icons/home.svg);
+        }
+      
+        
+		
+      }
+     a[aria-selected=true] {
+       //führ eventuellen text
+        span {
+          color: #ed4046; //whatever colour you want to use for the text
+        }
+      .tab-button-icon[aria-label=home] {
+          background-image: url(/assets/images/icons/homeactive.svg);
+        }
+      
+		
+      }
+    }
+	
+	 ion-tab-button .home
+	 {
+	 background-image: url(/assets/images/icons/home.svg);
+	width: 25px;
+    height: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+	 }
+	 
+	 ion-tab-button.tab-selected .home
+	 {
+	 background-image: url(/assets/images/icons/home_active.svg);
+	width: 25px;
+    height: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+	 }
+	 
+	 ion-tab-button .home
+	 {
+	 background-image: url(/assets/images/icons/home.svg);
+	width: 31px;
+    height: 35px;
+    background-size: contain;
+    background-repeat: no-repeat;
+	 }
+	 
+	 ion-tab-button.tab-selected .home
+	 {
+	 background-image: url(/assets/images/icons/home_active.svg);
+	width: 31px;
+    height: 35px;
+    background-size: contain;
+    background-repeat: no-repeat;
+	 }
+	 
+	  ion-tab-button .hospital
+	 {
+	 background-image: url(/assets/images/icons/hospital.svg);
+	width: 25px;
+    height: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+	
+	 }
+	 
+	  ion-tab-button .help
+	 {
+	 background-image: url(/assets/images/icons/help.svg);
+	width: 51px;
+    height: 51px;
+    background-size: contain;
+margin-top:5px;
+    background-repeat: no-repeat;
+	 }
+	 
+	 ion-tab-button.tab-selected .hospital
+	 {
+	 background-image: url(/assets/images/icons/hospital_active.svg);
+	width: 25px;
+    height: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+	 }
+
+
+:focus {
+    outline: -webkit-focus-ring-color auto 0;
+}
+
+ ion-tab-button .policestation
+	 {
+	 background-image: url(/assets/images/icons/police.svg);
+	width: 31px;
+    height: 35px;
+    background-size: contain;
+    background-repeat: no-repeat;
+	 }
+	 
+	 ion-tab-button.tab-selected .policestation
+	 {
+	 background-image: url(/assets/images/icons/police_active.svg);
+	width: 31px;
+    height: 35px;
+    background-size: contain;
+    background-repeat: no-repeat;}
+
+
+ ion-tab-button .menu
+	 {
+	 background-image: url(/assets/images/icons/menu.svg);
+	width: 35px;
+    height: 35px;
+    background-size: contain;
+    background-repeat: no-repeat;
+	 }
+	 
+	 ion-tab-button.tab-selected .menu
+	 {
+	 background-image: url(/assets/images/icons/menu_active.svg);
+	width: 35px;
+    height: 35px;
+    background-size: contain;
+    background-repeat: no-repeat;
+	 }
+	 
+	.fab-vertical-bottom
+	{
+	bottom:5px;
+	}
+	
+	ion-fab-button
+	{
+	width:60px;
+	height:60px;
+	border:none;
+    --background: transparent;
+	--color: #D90D0D;
+	font-weight:600;
+    border-radius: 250px;
+	--box-shadow:none;
+	    --background-activated: transparent;
+    --background-focused: transparent;
+    --background-hover: transparent;
+
+	}
+	
+	ion-fab-button img
+	{
+	width:100%;
+	--box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+	margin-top:10px;
+	}
+	 
+	 ion-tab-bar
+	 {
+	 height:65px;
+padding:0 10px;
+	 --border:none;
+	 box-shadow: 0px -5px 5px 0px rgba(0,0,0,0.1);
+	 }
+
+ .tab-has-label ion-label
+{
+font-size:12px;
+font-weight:500;
+}

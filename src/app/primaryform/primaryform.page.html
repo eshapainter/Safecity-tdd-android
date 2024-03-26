@@ -1,0 +1,117 @@
+<ion-header *ngIf="hide_question" class="ion-no-border newheader">
+    <div class="header-background"></div>
+    <ion-toolbar class="newtoolbar">
+        <ion-buttons slot="start" icon="undefined" text="" (click)="back()" class="backbutton" id="dynamicBack">
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-header *ngIf="hide_thankyou" class="ion-no-border thankuheadinnn">
+    <ion-toolbar class="newtoolbar">
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="newbg">
+
+    <div class="mainform">
+        <ion-row>
+            <ion-col size="12">
+                <div class="formarea questionaire">
+                    <form>
+
+                        <ul class="progress-form">
+
+                            <div class="Step1">
+                                <!-- <a id="dynamicBack" href="javascript:void(0);" class="pull-left animated fadeInUp show_one"><img src="assets/images/icon-feather-arrow-left.svg" class="img-fluid leftIcon"></a> -->
+
+                                <!-- Dynamic questions start -->
+                                <li class="form-group animated fadeInUp activate selected singleColumn" data-color="#7C6992" data-percentage="100%">
+                                    <label class="newview">
+                    <span class="newquestion" id="question_span">
+                      <!-- Placeholder for dynamic questions --></span><span class="error red">*</span><br>
+                    <span class="themeColor newspan" id="subtext_span">
+                      <!-- Placeholder for dynamic sub text --></span>
+                  </label>
+
+                                    <div id="options">
+                                        <!-- Placeholder for dynamic options -->
+                                    </div>
+
+                                    <span class="sharingForInfo"></span>
+                                </li>
+                                <!-- Dynamic questions end -->
+
+                            </div>
+
+                        </ul>
+
+                    </form>
+
+                    <!-- <button  (click)="next()" class="btn btn-primary nxt_btn animated nextPage fadeInUp pull-right mt-4">Next <span class="glyphicon glyphicon-chevron-down"></span></button>                 -->
+
+                </div>
+                <!-- //questionaire -->
+
+
+                <!-- thank you section start -->
+                <div class="thankyou-section" style="display:none">
+
+                    <div class="text mx-auto">
+                        <ion-row>
+                            <ion-col size="12">
+                                <h4 class="textColor dynamic-success-title" id="dynamic-success-title"></h4>
+                                <div class="rightimg">
+                                    <img src="assets/images/icons/thanku.png" class="checkIcon">
+                                </div>
+
+                                <div id="dynamic-success-content" class="dynamic-success-content newcentertext">
+                                </div>
+
+                                <div class="text-center mt-4 dynamic-success-link">
+
+                                    <!-- YES, I
+              WANT TO HELP
+            NO, I WOULD LIKE TO EXIT</ion-button> -->
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+
+                </div>
+
+
+
+            </ion-col>
+        </ion-row>
+
+    </div>
+
+    <div class="count float-right" *ngIf="hide_question">
+        <div class="progress">
+            <ion-progress-bar class="progress-bar" buffer="0" style="width: 0%;"></ion-progress-bar>
+        </div>
+        <h5 class="progress-text"> </h5>
+
+    </div>
+
+
+
+
+
+
+
+
+
+</ion-content>
+
+<div class="bottom" *ngIf="hide_question">
+    <ion-button id="dynamicNext" expand="full" shape="round" class="newbtn" (click)="next()">
+        {{'next' | translate}}</ion-button>
+</div>
+<!-- 
+<ion-content *ngIf="hide_thankyou">
+
+
+</ion-content> -->

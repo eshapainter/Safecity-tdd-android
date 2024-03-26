@@ -1,0 +1,123 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="dismiss()">
+      <img src="assets/images/icons/leftarrow.svg" class="newback" />
+    </ion-buttons>
+
+    <ion-title>{{'home_all_filters' | translate}}</ion-title>
+    <div class="newsidetext" slot="end" tappable (click)="deSelectAll()">
+      <p> {{'button_clear' | translate }} {{'home_all_filters' | translate}}</p>
+    </div>
+
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="mainside">
+    <div class="newlist">
+      <ion-card class="newcard">
+        <ion-row>
+          <ion-col size="12">
+            <h5 class="newheadone">{{'home_type_assault' | translate }}<ion-icon name="chevron-forward-outline" (click)="filter()"
+                slot="end"></ion-icon>
+            </h5>
+            <div class="newtopfilter">
+              <ion-list *ngFor='let item of catData2'>
+                <ion-item>
+                  <ion-label>{{item}}</ion-label>
+                </ion-item>
+              </ion-list>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </div>
+    <div class="newlist">
+      <ion-card class="newcard">
+        <ion-row>
+          <ion-col size="12">
+            <h5 class="newhead">{{'home_show_incident_from' | translate }}</h5>
+            <div class="newfilter">
+              <ion-list>
+                <ion-radio-group mode="md" [(ngModel)]='incidentFrom' (ionChange)="incedents()">
+                  <ion-item>
+                    <ion-label>{{'home_all_time' | translate }}</ion-label>
+                    <ion-radio slot="end" value="all"></ion-radio>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label>{{'home_today' | translate}}</ion-label>
+                    <ion-radio slot="end" value="today"></ion-radio>
+                  </ion-item>
+
+                  <ion-item>
+                    <ion-label>{{'home_this_week' | translate}}</ion-label>
+                    <ion-radio slot="end" value="week"></ion-radio>
+                  </ion-item>
+
+                  <ion-item>
+                    <ion-label>{{'home_this_month' | translate }}</ion-label>
+                    <ion-radio slot="end" value="month"></ion-radio>
+                  </ion-item>
+
+                  <ion-item>
+                    <ion-label>{{'home_this_year' | translate }}</ion-label>
+                    <ion-radio slot="end" value="year"></ion-radio>
+                  </ion-item>
+                </ion-radio-group>
+
+              </ion-list>
+
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </div>
+
+    <div class="newlist lastbottom">
+      <ion-card class="newcard">
+        <ion-row (ionChange)="timeOfDay($event)">
+          <ion-col size="12">
+            <h5 class="newhead">{{'home_time_of_day' | translate}}</h5>
+            <div class="newfilter">
+              <ion-list>
+                <ion-item>
+                  <ion-label>{{'home_morning' | translate }}</ion-label>
+                  <ion-checkbox slot="end" value="morning" [(ngModel)]='morning'></ion-checkbox>
+                </ion-item>
+                <ion-item>
+                  <ion-label>{{'home_afternoon' | translate }}</ion-label>
+                  <ion-checkbox slot="end" value="afternoon" [(ngModel)]='afternoon'></ion-checkbox>
+                </ion-item>
+
+                <ion-item>
+                  <ion-label>{{'home_evening' | translate }}</ion-label>
+                  <ion-checkbox slot="end" value="evening" [(ngModel)]='evening'></ion-checkbox>
+                </ion-item>
+
+                <ion-item>
+                  <ion-label>{{'home_night' | translate}}</ion-label>
+                  <ion-checkbox slot="end" value="night" [(ngModel)]='night'></ion-checkbox>
+                </ion-item>
+
+                <ion-item>
+                  <ion-label>{{'home_post_night' | translate}}</ion-label>
+                  <ion-checkbox slot="end" value="post_midnight" [(ngModel)]='post_midnight'></ion-checkbox>
+                </ion-item>
+
+              </ion-list>
+
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+
+    </div>
+  </div>
+</ion-content>
+<div class="bottom">
+  <ion-row>
+    <ion-col col-12>
+
+      <ion-button expand="full" shape="round" class="newbtn" (click)="getFilterdIncident()">{{'button_apply' | translate }}</ion-button>
+    </ion-col>
+  </ion-row>
+</div>

@@ -1,0 +1,116 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref='/tabs/home' icon="undefined" text="" class="backbutton"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      <div class="ion-text-wrap">{{'submit_a_safety_tip' |
+        translate }}</div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="tiponenewclass">
+  <div class="loctioninput">
+    <div class="form-group  loctioninput mb-4">
+      <label class="themeColorin m-0 p-0 d-block">{{'locate_add_on_map' | translate}}<span class="error red">*</span></label>
+      <label class="mb-2 p-0 sub-label d-block">{{'start_typing_select_from_suggestion' | translate}}</label>
+      <input type="text" class="form-control form-text search_address" id="search_address" name=""
+        placeholder="{{'start_typing' | translate}}" value="">
+    </div>
+
+    <div class="form-group mb-4">
+      <label class="themeColorin m-0 p-0 d-block">{{'map_move_pin' | translate}}</label>
+      <label class="mb-3 p-0 sub-label d-block">{{'an_exact_location_help_us' | translate}}</label>
+      <div class="mapouter" style="height:467px">
+      </div>
+    </div>
+
+    <div class="form-group mb-4">
+      <label class="themeColorin m-0 p-0 d-block">{{'address_pinned_on_map' | translate}}</label>
+      <p class="m-0 pt-0 pinned-add">{{'univercity_of_glocestershire' | translate}}</p>
+    </div>
+
+    <div class="form-group mb-4">
+      <label class="themeColor mb-2 p-0 d-block">{{'enter_area' | translate}}<span class="error">*</span></label>
+      <input type="text" class="form-control form-text" id="area" placeholder="{{'please_enter_area' | translate}}" value="">
+    </div>
+
+    <div class="form-group loctioninput mb-4">
+      <label class="themeColorin mb-2 p-0 d-block">{{'enter_building' | translate}}</label>
+      <input type="text" class="form-control form-text" id="building_address"
+        placeholder="{{'example_kurla_road' | translate}}" value="">
+    </div>
+
+    
+
+  </div>
+</div>
+
+<ion-row>
+  <ion-col col-12>
+    <ion-button expand="full" shape="round" class="safebtn" (click)="safetytip()" type="submit"
+      [disabled]="buttondisabled">{{'next' |
+      translate }}</ion-button>
+  </ion-col>
+</ion-row>
+  <!-- <div class="custom-control custom-checkbox newchekdot estimate mt-1">
+   <label class="custom-control-label eLabel" for="confirm_address">I confirm
+     <input type="checkbox" class="custom-control-input estimate map_estimate" id="confirm_address" ${this.isAccepted?'checked':''}>
+     <span class="checkmark"></span>
+     </label>
+   </div> -->
+
+
+  <!-- <div class="mainasafe">
+  <form [formGroup]="safetyForm" (ngSubmit)="safetytip()">
+<ion-row >
+      <ion-col size="12">
+<div class="newsafe">
+<h5>{{'safety_tips_info' | translate }}:</h5>
+
+<ion-list>
+<ion-item class="mainput">
+  <ion-label position="stacked">{{'safety_locality' | translate }}</ion-label>
+  <ion-input formControlName="locality" id="auto" (ionChange)="getlatlong()"  type="text" placeholder="Write here"></ion-input>
+</ion-item>
+<ion-item class="mainput">
+  <ion-label position="stacked">{{'safety_landmark' | translate }}</ion-label>
+  <ion-input type="text" placeholder="Write here" formControlName="landmark"   (ionChange)="getlatlong()" ></ion-input>
+</ion-item>
+<ion-item class="mainput">
+  <ion-label position="stacked">{{'area/suburb' | translate}}</ion-label>
+  <ion-input type="text" placeholder="Write here" formControlName="suburb"  (ionChange)="getlatlong()" ></ion-input>
+</ion-item>
+<ion-item class="mainput">
+  <ion-label position="stacked">{{'safety_city' | translate }}</ion-label>
+  <ion-input type="text" placeholder="Write here" formControlName="city"  [disabled]="city_disable" (ionChange)="getlatlong()" ></ion-input>
+</ion-item>
+<ion-item class="mainput">
+  <ion-label position="stacked">{{'safety_state'  | translate }}</ion-label>
+  <ion-input type="text" placeholder="Write here" formControlName="state" disabled  (ionChange)="getlatlong()" ></ion-input>
+</ion-item>
+<ion-item class="mainput">
+  <ion-label position="stacked">{{'safety_country' | translate }}</ion-label>
+  <ion-input type="text" placeholder="Write here" formControlName="country" disabled (ionChange)="getlatlong()" ></ion-input>
+</ion-item>
+	 </ion-list>
+
+   </div>
+    </ion-col>
+   </ion-row>
+   <ion-row>
+   
+</ion-row>
+    <ion-row>
+         <ion-col col-12>
+    
+    <ion-button expand="full" shape="round"  class="safebtn" type="submit"  [disabled] ="!safetyForm.valid" >{{'next' | translate }}</ion-button>
+      </ion-col>
+       </ion-row>
+ 
+  </form>
+   </div> -->
+
+</ion-content>

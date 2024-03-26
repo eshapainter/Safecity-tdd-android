@@ -1,0 +1,36 @@
+<!-- <ion-header>
+  <ion-toolbar>
+  <ion-buttons slot="start" >
+   <ion-back-button defaultHref='/viewsafety' icon="undefined" text=""  class="backbutton"></ion-back-button>
+   </ion-buttons>  
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-header>
+      <ion-toolbar>
+            <ion-buttons slot="start" (click)="dismiss()">
+                  <img src="assets/images/icons/leftarrow.svg" class="newback" />
+            </ion-buttons>
+      </ion-toolbar>
+</ion-header>
+
+<ion-content>
+      <div class="mainareain">
+            <ion-row>
+                  <ion-col size="12">
+                        <div class="newtext">
+                              <h4>{{safety_tip_title}}</h4>
+                              <div class="newcalendar">
+                                    <img src="assets/images/icons/calendar.svg" />
+                                    <p>{{getDaysAgo}} | {{time}}</p>
+                              </div>
+                              <div class="newcalendar">
+                                    <img src="assets/images/icons/location.svg" />
+                                    <p>{{exact_location}}</p>
+                              </div>
+                              <p>{{safety_tip_desc}}</p>
+                        </div>
+                  </ion-col>
+            </ion-row>
+      </div>
+</ion-content>

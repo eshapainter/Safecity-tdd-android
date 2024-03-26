@@ -1,0 +1,577 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+.my-custom-class.alert-wrapper {
+  font-size:16px !important;
+}
+
+.my-custom-class .alert-button {
+ background-color:#592D8D;
+ color:#fff;
+ width:80%;
+ margin:0 10% 20px 10%;
+ border-radius:4px;
+ font-size:14px;
+ font-weight:600;
+}
+
+.my-custom-class .alert-message {
+ font-size:16px;
+ line-height:22px;
+
+}
+
+.my-custom-class .alert-button.sc-ion-alert-ios:last-child
+{
+font-weight:500;
+}
+
+.select-alert .alert-title.sc-ion-alert-ios
+{
+font-weight:400;
+}
+
+.select-alert .alert-button.sc-ion-alert-ios:last-child
+{
+font-weight:400;
+}
+.tostclass
+{
+    top: -8%;
+}
+.cluster span
+{
+position: absolute;
+   line-height: 53px;
+    text-align: center;
+    top: -3px;
+    right: 0;
+    margin: 0 auto;
+}
+
+.newalertcss .alert-wrapper {
+  font-size:16px !important;
+   --background:#fff;
+}
+
+.newalertcss .alert-button {
+ background-color:#592D8D;
+ color:#fff;
+ width:80%;
+ margin:0 5% 20px 5%;
+ border-radius:4px;
+ font-size:14px;
+ font-weight:500;
+}
+
+.popover_setting .popover-content {
+    --min-width:280px !important;
+    --max-height: 350px !important;
+    --ion-background-color: #fff;
+    --ion-text-color: #000;
+    background-color: #fff;
+left:0 !important;
+right:0;
+margin:0 auto;
+border-radius:14px;
+}
+
+.newalertcss .alert-message {
+ font-size:16px;
+ line-height:19px;
+ text-align:left;
+ margin-top:8px;
+ padding-bottom: 1px;
+}
+
+.newalertcss input{
+border-radius:3px;
+height:38px;
+margin-bottom:6px;
+font-size:15px;
+}
+
+
+.newclass.sc-ion-alert-ios .alert-radio-inner.sc-ion-alert-ios
+{
+border-color:#2ED35A;
+}
+.newclass .alert-wrapper
+{
+    --min-width: 270px;
+}
+
+.newclass .alert-title.sc-ion-alert-ios
+{
+font-size:20px;
+font-weight:500;
+}
+
+.newclass .alert-tappable.sc-ion-alert-ios
+{
+    height: 54px
+}
+
+.gm-style .gm-style-iw-c
+{
+min-width:250px !important;
+}
+
+.gm-style .gm-style-iw-c p{
+margin:2px 0 !important;
+text-align:left !important;
+font-size:11px !important;
+line-height:1.6 !important;
+color:rgba(114, 114, 114, 0.97) !important;
+}
+
+.newclass .alert-button-inner.sc-ion-alert-ios
+{
+border-bottom:1px solid #ddd;
+font-size:18px;
+font-weight:400;
+}
+
+.searchbar-input-container.sc-ion-searchbar-ios
+{
+height:46px;
+}
+.searchbar-clear-button.sc-ion-searchbar-ios
+{
+right:10px;
+}
+
+.mainselect .searchbar-input.sc-ion-searchbar-ios
+{
+padding-inline-start: 15px !important;
+}
+.mainarea .searchbar-input.sc-ion-searchbar-ios
+{
+padding-inline-start: 15px !important;
+}
+.searchbar-search-icon
+{
+display:none;
+}
+
+.newclass .alert-button-inner.sc-ion-alert-md
+{
+border-bottom:1px solid #ddd;
+font-size:16px;
+font-weight:600;
+}
+.newclass .alert-button.sc-ion-alert-ios
+{border-top:none;
+}
+
+.newclass .alert-button.sc-ion-alert-md
+{border-top:none;
+}
+
+.newclass [aria-checked=true].sc-ion-alert-ios .alert-radio-label.sc-ion-alert-ios
+{
+color:#000;
+}
+
+.newclass [aria-checked=true].sc-ion-alert-md .alert-radio-label.sc-ion-alert-md
+{
+color:#000;
+}
+
+.newclass [aria-checked=true].sc-ion-alert-ios .alert-radio-inner.sc-ion-alert-ios
+{
+border-color:#2ED35A;
+}
+.newclass [aria-checked=true].sc-ion-alert-md .alert-radio-inner.sc-ion-alert-md
+{
+border-color:#2ED35A;
+}
+
+.newclass alert-radio-label
+{
+padding-top:16px;
+padding-bottom:16px;
+}
+
+.select-alert .alert-radio-label.sc-ion-alert-ios
+{
+white-space:inherit;
+}
+
+.newmodel
+{
+top:60%;
+border-radius:20px 20px 0 0;
+}
+
+.custommodel
+{
+top:0;
+}
+
+.forminci .mapouter
+{
+margin-bottom:12px;
+}
+
+.forminci .newquestion {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 11px;
+}
+
+.forminci .newradio
+{
+border:1px solid #ddd;
+}
+
+.forminci .inputsecondin
+{
+width:100%;
+height:41px;
+    border: 1px solid #ddd;
+    padding: 0 10px;
+}
+
+.forminci .question-listing-item
+{
+margin-bottom:18px;
+}
+
+.forminci ion-datetime
+{
+width:100%;
+}
+.forminci .centertext
+{
+text-align:center;
+display:inline-flex;
+width:5%;
+}
+.forminci .newsidetime
+{
+display:inline-flex;
+width:45%;
+}
+ .forminci .newclear {
+    width: 100% !important;
+   
+    text-align: right !important;
+    color: #6A37A5 !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    margin-bottom: 9px !important;
+    margin-top: 5px;
+	    float: inherit !important;
+}
+
+.forminci .nonactive
+{
+	opacity: 0.2; pointer-events: none;
+}
+
+
+.forminci .newlabeltext
+{
+margin-bottom:8px;
+font-size:16px;
+}
+
+.forminci .inputGroup label:before {
+    width: auto;
+    height: auto;
+    border-radius: inherit;
+    content: inherit;
+    background-color: transparent;
+    position: inherit;
+    left: inherit;
+    top: inherit;
+    transform: translate(-50%, -50%) scale3d(1, 1, 1);
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    z-index: -1;
+}
+
+.forminci .newcheck
+{
+position:relative;
+max-height:80px;
+}
+
+.forminci .suboption-field
+{
+width: 100% !important;
+    height: 42px !important;
+	padding:0 15px;
+	border-radius:3px;
+    border: 1px solid #ddd !important;
+    margin-top: 10px !important;
+order: 1;
+    z-index: 2;
+    position: inherit !important;
+    right: 0 !important;
+    top: 50%;
+    transform: translateY(0%) !important;
+    cursor: pointer;
+    visibility: inherit !important;
+}
+
+.forminci .invalid-msg
+{
+color:#ff0000;
+}
+
+.forminci .d-none
+{
+display:none;
+}
+
+.forminci .newadd {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin: 0px auto 0;
+    color: #292020;
+    font-size: 16px;
+	padding:5px 0;
+}
+.forminci .newtime {
+    background-image: url(/assets/images/icons/time.svg);
+    width: 24px;
+    height: 24px;
+    margin-top: 9px;
+    margin-right: 8PX;
+    background-position: 37%;
+}
+
+.forminci .inputGroup input {
+    width: 32px;
+     height: 32px; 
+   order: 1; 
+    z-index: 2; 
+    position: absolute;
+     right: 30px; 
+    top: 50%;
+    transform: translateY(-50%);
+   cursor: pointer; 
+  visibility: hidden; 
+}
+
+.forminci .inputGroup {
+    background-color: #fff;
+    display: block;
+    margin: 10px 0 0px;
+    position: relative;
+    border:none;
+
+}
+
+.forminci .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+
+.forminci .themeColorin
+{
+color:#592D8D !important
+}
+.forminci .error{
+    color: red;
+}
+
+.forminci .form-group label {
+    font-size: 16px;
+    margin-bottom: 0px !important;
+    padding-bottom: 2px !important;
+    display: inline-block;
+    padding: 0 !important;
+    margin-top: 0px;
+    }
+
+.forminci .sub-label {
+    font-size: 16px !important;
+    color: #5D5656 !important;
+    width:100% !important;
+}
+
+.forminci .custom-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.forminci .custom-checkbox .checkmark:after {
+    left: 7px;
+    top: 2px;
+    width: 4px;
+    height: 9px;
+    border: solid #2ED35A;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.forminci .custom-checkbox input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.forminci .custom-checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px !important;
+    margin-bottom: 12px;
+    cursor: pointer;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    font-size: 16px !important;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-top: 8px !important;
+}
+
+.forminci .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.forminci .newcal {
+    background-image: url(/assets/images/icons/calendar.svg);
+    width: 24px;
+    height: 24px;
+    margin-top: 9px;
+    margin-right: 15px;
+}
+
+.forminci .new {
+    border: 1px solid #E1D8EB;
+    background-color: #fff;
+    width: 100%;
+    display: inline-flex;
+}
+
+.forminci .label1 {
+    padding: 10px 12px 10px 20px !important;
+}
+.forminci .inputGroup label {
+    padding: 12px 30px;
+    width: 100%;
+    display: block;
+    text-align: left;
+    color: #3C454C;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    font-size: 16px !important;
+    transition: color 100ms ease-in;
+    overflow: hidden;
+	border:1px solid #ddd;
+    border-radius: 3px !important;
+}
+.forminci .neweditin
+{
+width:100%;
+margin-bottom:15px;
+}
+
+.forminci .neweditin label{
+   font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 8px;
+	width:100%;
+	float:left;
+}
+
+.forminci inputGroup label {
+    padding: 12px 30px;
+    width: 100%;
+    display: block;
+    text-align: left;
+    color: #3C454C;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    font-size: 16px !important;
+    transition: color 100ms ease-in;
+    overflow: hidden;
+	border-radius: 3px !important;}
+	.forminci .custom-control-input:checked ~ .label1::before {
+    color: #220E0E !important;
+    border-color: #E1D8EB;
+    background: #fff;
+}
+    
+	
+	.forminci .inputGroup input:checked ~ label:after {
+    width: 25px;
+    height: 26px;
+    content: "";
+    background: url(/assets/images/icons/tick.svg);
+    background-repeat: no-repeat;
+    background-position: 5px 8px;
+    z-index: 2;
+    position: relative;
+    float: right;
+    margin-top: -5px;
+    background-size: 19px;
+}
+.gm-style-pbt
+{
+display:none;
+}
+	
+.forminci .neweditin input
+{
+width:100%;
+height:38px;
+    border: 1px solid #ddd;
+    padding: 0 10px;
+}
+@media only screen and (min-height: 600px) and (min-width: 768px)
+{
+.newmodel
+{
+    --width: 100%;
+    --height: 100%;
+}
+
+.custommodel
+{
+ --width: 100%;
+    --height: 100%;
+}
+
+
+}

@@ -1,0 +1,50 @@
+<ion-content>
+  <div class="mainarea">
+    <img src="assets/images/icons/logo.svg" />
+    <ion-row>
+      <ion-col col-12>
+
+        <div class="newselect">
+          <p>{{'welcome' | translate}}<br>{{'select_your_location' | translate}}</p>
+          <ion-item mode="ios">
+            <ion-label class="newlabel" style="display:none;" position="stacked">
+              {{'home_country_your_country' | translate }}
+            </ion-label>
+            <ion-searchbar no-padding showCancelButton="never" mode="ios" (ionChange)="getCountry($event)"
+              [(ngModel)]="countryName" placeholder="{{'home_search_your_country' | translate}}" disabled="false" debounce="500"></ion-searchbar>
+            <div class="newserchlist" *ngIf="isItemAvailable && showCountrylist">
+              <ion-item (click)="selectedLocation(item)" *ngFor="let item of countryList">{{item.country_name}}</ion-item>
+            </div>
+          </ion-item>
+          <!-- <ion-item mode="ios">
+            <ion-label class="newlabel" style="display:none;" position="stacked">
+              {{'home_country_your_country' | translate }}
+            </ion-label>
+            <ion-select placeholder="{{'select_one' | translate}}" mode="ios" (ionChange)="getCountry($event)">
+              <ion-select-option *ngFor="let item of countryList" value="{{item.country_id}}">{{item.country_name}}
+              </ion-select-option>
+            </ion-select>
+          </ion-item> -->
+          
+          <ion-item mode="ios">
+            <ion-label class="newlabel" position="stacked">{{'select_city' | translate}}</ion-label>
+            <ion-searchbar no-padding showCancelButton="never" mode="ios" (ionChange)="getCity($event)"
+              [(ngModel)]="searchTerm" placeholder="{{'search_city' | translate}}" [disabled]="!countrySelectedFlag" debounce="500"></ion-searchbar>
+            <div class="newserchlist" *ngIf="hide_city_search">
+              <ion-item (click)="selectedcity(item)" *ngFor="let item of cityList">{{item.city_name}}</ion-item>
+            </div>
+          </ion-item>
+        </div>
+      </ion-col>
+    </ion-row>
+  </div>
+  <div class="bottom">
+    <ion-row>
+      <ion-col col-12>
+        <ion-button expand="full" shape="round" class="newbtn" (click)="goToNext()" [disabled]="buttondisable">
+          {{'procees' | translate}}
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

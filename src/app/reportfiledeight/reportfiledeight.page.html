@@ -1,0 +1,58 @@
+<ion-header class="ion-no-border" translucent>
+<div class="header-background"></div>
+  <ion-toolbar>
+   <ion-buttons slot="start" >
+   <ion-back-button defaultHref='/reportfiledseven' icon="undefined" text=""  class="backbutton"></ion-back-button>
+   </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="newbg">
+<div class="mainareain">
+<ion-row >
+      <ion-col size="12">
+<div class="newtext">
+<h4>Have you reported the incident to the police?<span class="red">*</span></h4>
+ <ion-list>
+  <ion-radio-group (ionChange)="reported($event)">
+
+    <ion-item>
+      <ion-label>Yes I have</ion-label>
+      <ion-radio slot="end" value="Yes I have/I Intend to"></ion-radio>
+    </ion-item>
+ <ion-item>
+      <ion-label>I will in the future</ion-label>
+      <ion-radio slot="end" value="I will in the future"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Not sure if i want to</ion-label>
+      <ion-radio slot="end" value="No I don’t intend to"></ion-radio>
+    </ion-item>
+	<ion-item>
+      <ion-label>No </ion-label>
+      <ion-radio slot="end" value="No "></ion-radio>
+    </ion-item>
+	    <ion-item>
+      <ion-label>I tried</ion-label>
+      <ion-radio slot="end" value="I tried"></ion-radio>
+    </ion-item>
+   
+  </ion-radio-group>
+  <ion-item *ngIf="otherFieldData" class="newin">
+    <ion-input  placeholder="Please specify" [(ngModel)] = "other"></ion-input>
+  </ion-item>
+</ion-list>
+
+   </div>
+    </ion-col>
+   </ion-row>
+   </div>
+</ion-content>
+<div class="bottom">
+<ion-row>
+     <ion-col col-12>
+
+<ion-button expand="full" shape="round"  class="newbtn" (click)="goToFieldNine()" [disabled]="buttonDisabled">NEXT</ion-button>
+  </ion-col>
+   </ion-row>
+</div>

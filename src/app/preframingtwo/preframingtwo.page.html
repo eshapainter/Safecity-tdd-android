@@ -1,0 +1,71 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button icon="undefined" text="" class="backbutton"></ion-back-button>
+        </ion-buttons>
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="mainframing">
+        <ion-row>
+            <ion-col size="12">
+                <!-- <div class="newframing dynamic-success-link1" > -->
+                <div class="newframing ">
+                    <!-- <p>We understand it is difficult to recall one’s traumatic experiences. If you feel uncomfortable at any time, know that you can exit. If you have not hit the submit button, your data will not be saved.<br><br> Even though you are sharing your experience anonymously, we need your consent to include your experience in our database of crowdsourced data.</p>
+<ion-list>
+<p *ngIf= "error" class="red">Please check this box to proceed</p>
+ 
+<ion-item >
+    <ion-label>I Consent 
+</ion-label>
+	     <ion-checkbox  slot="start" (ionChange)="ButtonEnableDisable($event)"></ion-checkbox>
+  </ion-item>
+  
+</ion-list>
+<h5 (click)="policy()">View Privacy Policy </h5>
+</div>
+<div class="bottomframing">
+
+<ion-button expand="full" shape="round"  class="newbtnframing" [disabled]="buttonDisabled" (click)= "addReport1()">START</ion-button> -->
+                    <div class="topbordingin dynamic-success-link1">
+
+                    </div>
+                    <!-- <div *ngIf="hide_for_jordan"> -->
+                    <ion-list *ngIf="hide">
+                        <p *ngIf="error" class="red">{{'consent_error' | translate}}</p>
+
+                        <ion-item>
+                            <ion-label>{{'i_consent' | translate}}
+                            </ion-label>
+                            <ion-checkbox class="newcheckbottomin" slot="start" (ionChange)="ButtonEnableDisable($event)">
+                            </ion-checkbox>
+                        </ion-item>
+
+                    </ion-list>
+                    <!-- </div> -->
+                    <!-- <div *ngIf="hide_for_jordan"> -->
+                    <h5 (click)="policy()" *ngIf="hide">{{'view_privacy_policy' | translate}}</h5>
+                    <!-- <h5 (click)="policy()" *ngIf="hide_for_jordan_p">{{'view_privacyprotection_policy' | translate}}</h5> -->
+                    <!-- </div> -->
+
+                </div>
+
+            </ion-col>
+        </ion-row>
+
+        <!-- <div *ngIf="hide_for_jordan"> -->
+        <div class="bottomframing" *ngIf="hide">
+            <ion-button expand="full" shape="round" class="newbtnframing" [disabled]="buttonDisabled" (click)="addReport1()">
+                {{'Start' | translate}}</ion-button>
+        </div>
+        <!-- </div> -->
+
+        <div class="bottomframing" *ngIf="hide_for_jordan">
+            <ion-button expand="full" shape="round" class="newbtnframing" (click)="experiance()">
+                {{'next' | translate}}</ion-button>
+        </div>
+    </div>
+
+</ion-content>

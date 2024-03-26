@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31" height="22" viewBox="0 0 31 22">
+  <defs>
+    <clipPath id="clip-Artboard_1">
+      <rect width="31" height="22"/>
+    </clipPath>
+  </defs>
+  <g id="Artboard_1" data-name="Artboard – 1" clip-path="url(#clip-Artboard_1)">
+    <rect width="31" height="22" fill="#fff"/>
+    <g id="Right_Icon" data-name="Right Icon" transform="translate(4)">
+      <path id="Icon_Color" data-name="Icon Color" d="M7.333,8.25a.917.917,0,0,1,0-1.833h13.75a.917.917,0,0,1,0,1.833ZM.917,1.833A.917.917,0,1,1,.917,0H21.083a.917.917,0,0,1,0,1.833Z" transform="translate(0 7.333)" fill="#121212"/>
+    </g>
+  </g>
+</svg>

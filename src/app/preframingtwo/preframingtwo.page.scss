@@ -1,0 +1,280 @@
+.header-md ion-title {
+    text-align: center;
+}
+
+.header-ios .toolbar-ios:last-child .toolbar-background-ios {
+    border: 0;
+}
+
+ion-header {
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+.header-md::after {
+    background: transparent;
+}
+
+.header-ios ion-toolbar:last-of-type {
+    --border-width: 0 0 0;
+}
+
+.backbutton {
+    background-image: url(/assets/images/icons/leftarrow.svg);
+    width: 25px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    height: 25px;
+}
+
+.sc-ion-buttons-md-s .button {
+    margin-left: 0;
+}
+
+.sc-ion-buttons-ios-s .button {
+    margin-left: 4px;
+}
+
+.mainareain {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 196px;
+    padding: 0;
+}
+
+.header-ios ion-toolbar {
+    --padding-top: 3px;
+    --padding-bottom: 3px;
+    --padding-start: 4px;
+    --padding-end: 4px;
+    --min-height: 75px;
+}
+
+.header-md ion-toolbar {
+    --padding-top: 3px;
+    --padding-bottom: 3px;
+    --padding-start: 4px;
+    --padding-end: 4px;
+    --min-height: 75px;
+}
+
+.mainframing {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 20px;
+}
+
+.newframing h5 {
+    width: 100%;
+    height: auto;
+    line-height: 25px;
+    font-size: 20px;
+    text-align: center;
+    margin: 22px auto 0;
+    color: #592D8D;
+    margin-bottom: 50px;
+    font-size: 15px;
+    text-decoration: underline;
+    margin-top: 0;
+}
+
+.newframing {
+    width: 100%;
+    height: auto;
+    padding: 0 25px;
+    text-align: left;
+    color: #220E0E;
+    margin-top: 0;
+}
+
+.checkbox-icon {
+    --border-radius: none;
+}
+
+.custom-control-input:checked~.label1::before {
+    color: #220E0E !important;
+    border-color: #E1D8EB;
+    background: #fff;
+}
+
+.inputGroup input:checked~label:after {
+    width: 25px;
+    height: 26px;
+    content: '';
+    background: url(/assets/images/icons/tick.svg);
+    background-repeat: no-repeat;
+    background-position: 5px 8px;
+    z-index: 2;
+    position: relative;
+    float: right;
+    margin-top: -5px;
+    background-size: 19px;
+}
+
+.inputGroup input:checked~label:before {
+    -webkit-transform: translate(-50%, -50%) scale3d(56, 56, 1);
+    transform: translate(-50%, -50%) scale3d(56, 56, 1);
+    opacity: 1;
+}
+
+.custom-checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px !important;
+    margin-bottom: 12px;
+    cursor: pointer;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    font-size: 16px !important;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-top: 8px !important;
+}
+
+
+/* Hide the browser's default checkbox */
+
+.custom-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+
+/* Create a custom checkbox */
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.custom-checkbox:hover input~.checkmark {
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+
+/* When the checkbox is checked, add a blue background */
+
+.custom-checkbox input:checked~.checkmark {
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+/* Show the checkmark when checked */
+
+.custom-checkbox input:checked~.checkmark:after {
+    display: block;
+}
+
+.custom-checkbox .checkmark:after {
+    left: 7px;
+    top: 2px;
+    width: 4px;
+    height: 9px;
+    border: solid #2ED35A;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.newbtnframing {
+    color: #fff !important;
+    --border-radius: 4px;
+    font-size: 16px;
+    height: 50px;
+    --background: #572691;
+    --background-activated: #572691;
+    --background-focused: #572691;
+    --background-hover: #572691;
+    --background-activated-opacity: 1;
+    --background-focused-opacity: 1;
+    --background-hover-opacity: 1;
+    width: 100%;
+    font-weight: 500;
+    margin-top: 40px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 0 auto;
+    --box-shadow: 0;
+    text-align: center;
+}
+
+.bottomframing {
+    width: 80%;
+    margin: 50px auto 150px;
+    text-align: center;
+}
+
+.newframing ion-item {
+    --padding-start: 0;
+    margin-bottom: 20px;
+    --inner-border-width: 0 0 0px 0;
+    border: none !important;
+}
+
+.newframing .red {
+    color: #BA0B0B;
+    font-size: 13px !important;
+    margin-bottom: 0 !important;
+}
+
+.newframing.item .sc-ion-label-ios-h {
+    font-size: 16px;
+}
+
+.newframing.item .sc-ion-label-md-h {
+    font-size: 16px;
+}
+
+.newframing.in-item[slot="start"] {
+    margin-inline-end: 15px !important;
+}
+
+.newcheckbottomin {
+    --border-radius: 0 !important;
+}
+
+@media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+    .mainframing {
+        bottom: inherit;
+        top: 5px;
+        margin-bottom: 25px;
+    }
+}
+
+@media (device-height :640px) and (device-width: 360px) and (-webkit-min-device-pixel-ratio: 2) {
+    .mainframing {
+        bottom: inherit;
+        top: 5px;
+        margin-bottom: 25px;
+    }
+}
+
+@media all and (max-width: 550px) and (min-width: 320px) {
+    .md .mainframing {
+        top: 11%;
+        bottom: inherit;
+    }
+}

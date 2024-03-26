@@ -1,0 +1,104 @@
+<ion-header *ngIf='show'>
+    <ion-toolbar>
+        <ion-title dir="rtl"><img src="assets/images/icons/logo.svg" /></ion-title>
+        <div class="newsidetext" (click)="help()" slot="end">
+            <p>{{'help_menu' | translate}}</p>
+        </div>
+        <ion-buttons slot="end" class="newmenu" (click)="menu()">
+            <img src="assets/images/icons/menunew.svg" />
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<!-- <ion-header *ngIg = 'hide'
+     >
+  <ion-toolbar>
+  <ion-buttons slot="start" (click)="hide1()" >
+   <img src="assets/images/icons/leftarrow.svg" class="newback"/>
+   </ion-buttons>  
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-header *ngIf='hide'>
+    <ion-toolbar (click)="hide1()">
+        <ion-buttons slot="start">
+            <img src="assets/images/icons/leftarrow.svg" class="newback" />
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <!-- <iframe width="600" height="800" src="https://datastudio.google.com/embed/reporting/8a634d0f-6702-45a6-99c9-986510667108/page/larOC" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+    <form [formGroup]="searchForm">
+        <ion-searchbar mode="ios" showCancelButton="never" (ionChange)="getOriginal($event)" (ionClear)="clearInput($event)" id="autocomplete" placeholder="{{'search_area' | translate}}" debounce="500" formControlName="location" type="text"></ion-searchbar>
+    </form>
+    <div class="newshare" (click)="showFullMap()">
+        <!-- <img src="assets/images/googleimg.png"/> -->
+        <div #map id="map"></div>
+
+        <div class="notdatain" *ngIf="locations1  == '' && segmentModel === 'one'">
+            <p>{{'incident_no_data' | translate}}</p>
+        </div>
+
+        <div class="notdatain" *ngIf="locations1 == '' && segmentModel === 'two'">
+            <p>{{'safety_tip_no_data' | translate}}</p>
+        </div>
+
+    </div>
+    <div class="newoverlap" *ngIf='show'>
+        <!-- <div class="notdatainside" *ngIf = "segmentModel === 'one'">
+      <p>To view incidents reported before 01 Dec 2020, <a href="https://public.tableau.com/profile/mehul.sharma3900#!/vizhome/Safecity_Dashboard_Delhi_final/MumbaiStory" target="_blank">click here</a></p>
+    </div> -->
+        <div class="toparrow" (click)="newmodalin()">
+            <ion-icon name="chevron-up-outline"></ion-icon>
+        </div>
+        <div class="segmentonein">
+            <ion-segment mode="ios" value="one" [(ngModel)]="segmentModel" (ionChange)="segmentChanged($event)">
+                <ion-segment-button value="one">
+                    <ion-label>{{'incidents'| translate}}</ion-label>
+                </ion-segment-button>
+                <ion-segment-button value="two">
+                    <ion-label>{{'safety_tips' | translate }}</ion-label>
+                </ion-segment-button>
+            </ion-segment>
+        </div>
+
+        <div *ngIf="segmentModel === 'one'">
+            <ion-card class="newcardside" (click)="preframing()">
+                <ion-card-content>
+                    <p>{{'incident_detail_msg'|translate}}</p>
+                    <h5>{{'incident_button' | translate}}</h5>
+                </ion-card-content>
+            </ion-card>
+            <div class="newitemone">
+                <h2>{{'incident_shared_community' | translate}}</h2>
+
+            </div>
+
+
+            <ion-button class="newsafe" shape="round" expand="full" (click)="preframing()">{{'incident_button' | translate}}
+            </ion-button>
+        </div>
+
+        <div *ngIf="segmentModel === 'two'">
+
+            <ion-card class="newcardside" (click)="safetytip()">
+                <ion-card-content>
+                    <p>{{'safety_detail_msg' | translate}}</p>
+                    <h5>{{'safety_button' | translate}}</h5>
+                </ion-card-content>
+            </ion-card>
+            <div class="newitemone">
+                <h2>{{'safety_shared_community' | translate}}</h2>
+
+
+
+            </div>
+
+            <ion-button class="newsafein" shape="round" expand="full" (click)="safetytip()">{{'safety_button' | translate}}
+            </ion-button>
+        </div>
+
+    </div>
+
+</ion-content>

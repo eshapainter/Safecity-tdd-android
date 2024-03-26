@@ -1,0 +1,53 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button icon="undefined" text="" class="backbutton"></ion-back-button>
+        </ion-buttons>
+        <ion-title></ion-title>
+    </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content>
+    <div class="mainareango">
+        <ion-row>
+            <ion-col size="12">
+                <img src="assets/images/icons/logo.svg" />
+                <p>{{'partners_with' | translate}}</p>
+            </ion-col>
+        </ion-row>
+
+    </div>
+    <div class="newlogosecmain">
+        <ion-row>
+            <ion-col *ngFor="let item of ngodetails" size="12">
+                <div class="newlogosec">
+                    <img src="{{item.logo}}" />
+                </div>
+            </ion-col>
+            <!-- <ion-col size="12">
+				<div class="newlogosec">
+					<img src="assets/images/nglogoone.png" />
+				</div>
+			</ion-col>
+			<ion-col size="12">
+				<div class="newlogosec">
+					<img src="assets/images/nglogotwo.png" />
+				</div>
+			</ion-col>
+			<ion-col size="12">
+				<div class="newlogosec">
+					<img src="assets/images/nglogothree.png" />
+				</div>
+			</ion-col> -->
+        </ion-row>
+    </div>
+</ion-content>
+<div class="bottom">
+    <ion-row>
+        <ion-col col-12>
+            <ion-button expand="full" (click)="proceed()" shape="round" class="newbtn">{{'proceed' | translate}}</ion-button>
+        </ion-col>
+    </ion-row>
+</div>

@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+  <ion-buttons slot="start" >
+   <ion-back-button defaultHref='/viewreport' icon="undefined" text=""  class="backbutton"></ion-back-button>
+   </ion-buttons> 
+  <ion-title><div class="ion-text-wrap">{{'edit_safety_tip' | translate }}</div></ion-title>   
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="newbg">
+  <form [formGroup]="editsafetyForm" (ngSubmit)="editSafetyTip()">
+<ion-row>
+      <ion-col col-12>
+<ion-item>
+  <ion-label position="stacked">{{'location_for_which_you_want_to_submit_safety_tip' | translate }}</ion-label>
+  <ion-input type="text" formControlName="location" (ionChange)="getlatlong(editsafetyForm.value.location)" id="autocomplete3"></ion-input>
+</ion-item>
+
+<ion-item class="newinput" mode="ios">
+  <ion-label position="stacked">{{'map_move_pin' | translate }}:</ion-label>
+  <!-- <div class="newarea"> -->
+  <!-- <ion-input type="text"></ion-input> -->
+   <!-- <img  src="assets/images/icons/location.svg"/> -->
+   <!-- </div> -->
+   <div #map id="map" ></div>
+    <!-- <img class="newloc" src="assets/images/googleimg.png"/> -->
+</ion-item>
+<ion-item>
+  <ion-label position="stacked">{{'safety_tips' | translate }}</ion-label>
+  <ion-textarea rows="4" cols="15" placeholder="{{'enter_any_notes_here' | translate}}" formControlName="safety_desc"></ion-textarea>
+</ion-item>
+<ion-item >
+  <ion-label position="stacked" >{{'please_enter_title_for_safety_tips' | translate}}</ion-label>
+  <ion-input type="text" formControlName="safety_title"></ion-input>
+</ion-item>
+
+	
+	 
+	 <ion-row>
+     <ion-col col-12>
+
+<ion-button expand="full" shape="round"  class="newbtn" type="submit">{{'button_done' | translate }}</ion-button>
+  </ion-col>
+  </ion-row>
+	 </ion-col>
+    </ion-row>
+  </form>
+	</div>
+</ion-content>

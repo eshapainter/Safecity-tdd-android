@@ -1,0 +1,32 @@
+
+<ion-content>
+  <div class="mainarea">
+    <img src="assets/images/icons/logo.svg" />
+    <ion-row>
+      <ion-col col-12>
+
+        <div class="newselect">
+         <ion-item mode="ios">
+		   <ion-label  class="newlabel"  position="stacked">{{'select_lang' | translate}}
+            </ion-label>
+            <ion-select placeholder="{{'select_one' | translate}}" mode="ios" (ionChange) = "selectLanguage($event)">
+              <ion-select-option *ngFor="let item of languageList" value = "{{item.id}}">{{item.name}}</ion-select-option>
+            </ion-select>
+        </ion-item>
+	
+	
+        </div>
+
+      </ion-col>
+    </ion-row>
+	
+  </div>
+  <div class="bottom">
+  <ion-row>
+    <ion-col col-12>
+      <ion-button expand="full" shape="round" class="newbtn" (click)="onboarding()" [disabled]="buttondisable">{{'procees' | translate}}
+      </ion-button>
+    </ion-col>
+  </ion-row>
+  </div>
+</ion-content>

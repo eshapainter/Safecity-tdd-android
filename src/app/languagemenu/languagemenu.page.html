@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" >
+   <ion-back-button  icon="undefined" text=""  class="backbutton"></ion-back-button>
+   </ion-buttons>
+    <ion-title>{{'language' | translate}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="mainarea">
+
+<ion-row>
+     <ion-col col-12>
+      <!-- <form [formGroup]="form"> -->
+	 <div class="newselect">
+  
+ <ion-item>
+  <ion-label class="newlabel" position="stacked">{{'select_lang' | translate}}</ion-label>
+          <ion-select placeholder="{{'select_one' | translate}}" mode="ios" [(ngModel)]="val" (ionChange)="changeLanguage($event)">
+            <ion-select-option   *ngFor="let item of language_list" value = "{{item.id}}">{{item.name}}</ion-select-option>
+            
+            
+            <!-- <ion-select-option [(ngModel)]="val" value='en'>{{'select_eng' | translate}}</ion-select-option>
+            <ion-select-option [(ngModel)]="val" value='hi'>{{'select_hin' | translate}}</ion-select-option> -->
+          </ion-select>
+        </ion-item>
+  
+   </div>
+   <!-- </form> -->
+   </ion-col>
+   </ion-row>
+  
+</div>
+</ion-content>

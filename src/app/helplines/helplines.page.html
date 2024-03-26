@@ -1,0 +1,81 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+   <!-- <ion-buttons slot="start" >
+   <ion-back-button defaultHref='/tabs/home' icon="undefined" text=""  class="backbutton"></ion-back-button>
+  </ion-buttons> -->
+  <ion-title>{{'userful_information' | translate}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="helpline">
+<ion-row>
+ <ion-col size="12">
+ <div class="helplinetext">
+ <p>{{'help_desc' | translate}} {{final_userful_info}}</p>
+ </div>
+ </ion-col>
+    </ion-row>
+	<ion-row>
+ <ion-col size="12">
+  <ion-card *ngIf="response">
+  <div class="helpipc" *ngIf="category_val_hide" >
+ <h5>{{'ipc_code' | translate}}</h5>
+   <ion-item *ngFor="let item of category_val">
+    <ion-label>{{item.title}}:<h4 class="heading" >{{item.ipc_sections}}</h4></ion-label>
+  </ion-item>
+   <!-- <ion-item >
+    <ion-label>Domestic Violence:<h4 class="heading" >498A</h4></ion-label>
+  </ion-item>
+  -->
+
+ </div>
+ 
+   <div class="helpipc" *ngIf="helpline_data_hide" >
+ <h5>{{'helpline' | translate}}</h5>
+   <ion-item *ngFor="let item of helpline_data">
+    <ion-label>{{item.emergency_title}}:<h4 class="headingin" >{{item.emergency_no}}</h4></ion-label>
+  </ion-item>
+   <!-- <ion-item >
+    <ion-label>Women Helpline:<h4 class="heading" > 1091</h4></ion-label>
+  </ion-item>
+   <ion-item >
+    <ion-label>Women Helpline - Domestic Abuse:<h4 class="heading" >181</h4></ion-label>
+  </ion-item>
+<ion-item >
+    <ion-label>Pan-India Emergency Number:<h4 class="heading" >112</h4></ion-label>
+  </ion-item> -->
+ </div>
+
+</ion-card>
+    </ion-col>
+    </ion-row>
+<ion-row>
+ <ion-col size="12">
+
+<ion-item lines="none" class="newcardline" (click)= "hospital()">
+  <ion-label>{{'view_hospital' | translate}}</ion-label>
+<img slot="end" src="assets/images/icons/rightarrow.svg"/>
+</ion-item>
+<ion-item lines="none" class="newcardline" (click)= "policein()">
+  <ion-label>{{'view_police_station' | translate}}</ion-label>
+<img slot="end" src="assets/images/icons/rightarrow.svg"/>
+</ion-item>
+<ion-item lines="none" class="newcardline" (click)= "legal()">
+  <ion-label>{{'more_legal_resources' | translate}}</ion-label>
+<img slot="end" src="assets/images/icons/rightarrow.svg"/>
+</ion-item>
+<h4 class="bottomline">{{'help_chat_desc' | translate}}</h4>
+ </ion-col>
+    </ion-row>
+	
+	  <div class="helplinebottom">
+<ion-row>
+     <ion-col col-12>
+	 <ion-button expand="full" shape="round" fill="outline"  class="newbtnyes" (click)="report()">{{'Share_app_with_friend' | translate}}</ion-button>
+<ion-button expand="full" shape="round"  class="newbtn" (click)="home()">{{'button_go_home' | translate}}</ion-button>
+  </ion-col>
+   </ion-row>
+</div>
+	</div>
+</ion-content>

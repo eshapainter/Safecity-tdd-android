@@ -1,0 +1,195 @@
+<ion-header>
+    <ion-toolbar>
+        <!-- <ion-buttons slot="start">
+      <ion-back-button defaultHref='/home' icon="undefined" text="" class="backbutton">
+      </ion-back-button>
+    </ion-buttons> -->
+
+        <ion-buttons slot="start" (click)="dismiss()">
+            <img src="assets/images/icons/leftarrow.svg" class="newback" />
+        </ion-buttons>
+
+        <div class="newsidetext" slot="end" (click)="help()">
+            <p>{{'help_menu' | translate}}</p>
+        </div>
+
+        <ion-buttons slot="end" class="newmenu" (click)="menu()">
+            <img src="assets/images/icons/menunew.svg" />
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <!-- <div class="toparrow" *ngIf = "showFull != 'true'" (click)="newmodalin()">
+<ion-icon name="chevron-up-outline"></ion-icon>
+</div> -->
+    <div class="mainseg">
+        <div class="segmentin">
+            <ion-segment mode="ios" value="one" [(ngModel)]="segmentModel" (ionChange)="segmentChanged($event)">
+                <ion-segment-button value="one">
+                    <ion-label>{{'incidents'| translate}}</ion-label>
+                </ion-segment-button>
+                <ion-segment-button value="two">
+                    <ion-label>{{'safety_tips' | translate }}</ion-label>
+                </ion-segment-button>
+            </ion-segment>
+        </div>
+
+        <div *ngIf="segmentModel === 'one'">
+            <ion-card class="newcard" (click)="preframing()">
+                <ion-card-content>
+                    <p>{{'incident_detail_msg' | translate}}</p>
+                    <h5>{{'incident_button' | translate}}</h5>
+                </ion-card-content>
+            </ion-card>
+            <div class="newitemone">
+                <h2>{{'incident_shared_community' | translate}}</h2>
+                <ion-chip fill="outline" (click)="filter()">
+                    <ion-label>{{'home_all_filters' | translate}} <span *ngIf="incidentNumber">{{filterCount}}</span></ion-label>
+                </ion-chip>
+
+                <div class="clear" (click)="clearList('incident')">
+                    {{'button_clear' | translate }}
+                </div>
+
+
+
+                <ion-card *ngFor="let item of incidentList" class="newcardin" tappable (click)="viewreport(item)">
+                    <ion-card-header *ngIf="incidentList.length > 0">
+
+                        <ion-card-title>
+                            <ion-row>
+                                <ion-col size="12">{{item.categories}}</ion-col>
+                            </ion-row>
+                        </ion-card-title>
+
+                    </ion-card-header>
+                    <ion-card-content *ngIf="incidentList.length > 0">
+                        <ion-row>
+                            <ion-col size="5">
+                                <div class="subheading">
+                                    <h3>{{'At' | translate}} {{item.area}}</h3>
+
+                                </div>
+                            </ion-col>
+                            <ion-col size="7">
+                                <div class="subheading">
+                                    <h4>{{item.show_date}} {{item.show_time}}</h4>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col size="12">
+                                <p>{{item.show_disc}}...<span>{{'read_more' | translate}}</span></p>
+                            </ion-col>
+                        </ion-row>
+                    </ion-card-content>
+
+                </ion-card>
+                <div class="notfoundin" *ngIf="incidentList.length == 0 && segmentModel === 'one'">
+                    <p>{{'incident_no_data' | translate}} </p>
+                </div>
+                <!-- <div class="notviewincidents" >
+          <p>To view incidents reported before 01 Dec 2020, <a href="https://public.tableau.com/profile/mehul.sharma3900#!/vizhome/Safecity_Dashboard_Delhi_final/MumbaiStory" target="_blank">click here</a></p>
+        </div> -->
+                <ion-fab (click)="preframing()" vertical="bottom" horizontal="end" slot="fixed">
+                    <ion-fab-button>
+                        <ion-icon name="add"></ion-icon>
+                    </ion-fab-button>
+                </ion-fab>
+                <div class="pagination" *ngIf="incidentList.length > 0">
+                    <div class="textpage">
+                        <p>{{showing}}</p>
+                        <!-- <p>Showing</p><p>1</p><p>-</p><p>20</p><p>0f</p><p>300</p> -->
+                    </div>
+                    <div class="textpage">
+                        <ion-button class="arrowbtn" (click)="previousforward('previous')" [disabled]="hide_back">
+                            <ion-icon name="chevron-back-outline"></ion-icon>
+                        </ion-button>
+                        <ion-button class="arrowbtn" [disabled]="forwardincidentdisabled" (click)="previousforward('forward')">
+                            <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </ion-button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- <ion-button class="newsafe" shape="round" expand="full" (click)="preframing()">Share Incident anonymously
+      </ion-button> -->
+        </div>
+
+        <div *ngIf="segmentModel === 'two'">
+            <ion-card class="newcard" (click)="safetytip()">
+                <ion-card-content>
+                    <p>{{'short_safety_msg' | translate}}</p>
+                    <h5>{{'safety_button' | translate}}</h5>
+                </ion-card-content>
+            </ion-card>
+            <div class="newitemone">
+                <h2>{{'safety_shared_community' | translate}}</h2>
+                <ion-chip fill="outline" (click)="safteyfilter()">
+                    <ion-label>{{'home_all_filters' | translate}}<span *ngIf="number">1</span></ion-label>
+                </ion-chip>
+                <div class="clear" (click)='clearList(safetytip)'>
+                    {{'button_clear' | translate }}
+                </div>
+                <ion-card class="newcardin" *ngFor="let item of safetyTipList" tappable (click)="viewsafety(item)">
+                    <ion-card-header *ngIf="safetyTipList.length > 0">
+                        <ion-card-title>
+                            <ion-row>
+                                <ion-col size="12">{{item.safety_tip_title}}</ion-col>
+                            </ion-row>
+                        </ion-card-title>
+
+                    </ion-card-header>
+                    <ion-card-content *ngIf="safetyTipList.length > 0">
+                        <ion-row>
+                            <ion-col size="5">
+                                <div class="subheading">
+                                    <h3>{{'At' | translate}} {{item.city}}</h3>
+
+                                </div>
+                            </ion-col>
+                            <ion-col size="7">
+                                <div class="subheading">
+                                    <h4>{{item.show_date}} {{item.show_time}}</h4>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col size="12">
+                                <p>{{item.show_disc}}…<span>{{'read_more' | translate}}</span></p>
+                            </ion-col>
+                        </ion-row>
+                    </ion-card-content>
+
+                </ion-card>
+                <div class="notfoundin" *ngIf="safetyTipList.length == 0 && segmentModel === 'two'">
+                    <p>{{'safety_tip_no_data' | translate}}</p>
+                </div>
+
+            </div>
+            <ion-fab vertical="bottom" class="newfab" (click)="safetytip()" horizontal="end" slot="fixed">
+                <ion-fab-button>
+                    <ion-icon name="add"></ion-icon>
+                </ion-fab-button>
+            </ion-fab>
+            <div class="pagination" *ngIf="safetyTipList.length > 0">
+                <div class="textpage">
+                    <p>{{safetyShowing}}</p>
+                    <!-- <p>Showing</p><p>1</p><p>-</p><p>20</p><p>0f</p><p>300</p> -->
+                </div>
+                <div class="textpage">
+                    <ion-button class="arrowbtn" [disabled]="hide_safety_back" (click)="previousforwardsafety('previous')">
+                        <ion-icon name="chevron-back-outline"></ion-icon>
+                    </ion-button>
+                    <ion-button class="arrowbtn" [disabled]="forwardsafetydisabled" (click)="previousforwardsafety('forward')">
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </ion-button>
+                </div>
+            </div>
+            <!-- <ion-button class="newsafein" shape="round" expand="full" (click)="safetytip()">Share safety tipy anonymously
+      </ion-button> -->
+        </div>
+    </div>
+
+</ion-content>
